@@ -1,0 +1,14 @@
+site_name: Mijn Documentatie
+theme:
+  name: material
+nav:
+  - Home: index.md
+  - Introduction: 1_Introduction.md
+  - Necessary Software: 2_Necessary_software.md
+  - Basic Work Rules: 3_Basic_work_rules.md
+  - Working Environment: 4_Working_environment_in_QGIS.md
+  - Giswater Plugin: 5_Giswater_Plugin.md
+  - Digitalize the Network: 6_How_to_digitalize_the_network.md
+  - Topological Adjustments: 7_Topological_and_Geometrical_Adjustments.md
+  - Planification Sectors: 8_Planification_sectors.md
+  - Export/Import Hydraulic Model: 9_Export_Import_of_the_hydraulic_model.md
