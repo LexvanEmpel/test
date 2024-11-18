@@ -1,6 +1,6 @@
 site_name: Giswater Documentation
 theme:
-  name: gitbook
+  name: readthedocs
   logo: assets/image.avif
   palette:
     - scheme: default
@@ -10,8 +10,8 @@ theme:
       primary: blue
       accent: light-blue
 font:
-  text: Open Sans
-  code: Fira Code
+  text: Roboto
+  code: Roboto Mono
 
 nav:
   - Home: index.md
