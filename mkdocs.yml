@@ -1,24 +1,20 @@
 site_name: Giswater Documentation
 theme:
   name: readthedocs
-  logo: assets/image.avif
-  palette:
-    - scheme: default
-      primary: white
-      accent: light-blue
-    - scheme: slate
-      primary: blue
-      accent: light-blue
-font:
-  text: Roboto
-  code: Roboto Mono
+  logo: assets/giswater.png
+
+extra_css:
+  - assets/custom.css
+extra_javascript:
+  - assets/lightbox.js
 
 nav:
-  - Home: index.md
-  - 1. Introduction: 1_Introduction.md
-  - 2. Necessary software: 2_Necessary_software.md
-  - 3. Basic work rules: 3_Basic_work_rules.md
+  - Home: Markdownfiles/index.md
+  - Introduction:
+      - Overview: Markdownfiles/introduction/Introduction.md
+  - Installation:
+      - Work Rules: Markdownfiles/installation/Basic_work_rules.md
+      - Necessary Software: Markdownfiles/installation/Necessary_software.md
 
 plugins:
-  - search:
-      lang: [en, es]  # Taalcodes
+  - search

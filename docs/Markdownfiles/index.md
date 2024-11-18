@@ -1,12 +1,12 @@
-# GISwater Custom Documentation
+# Giswater Custom Documentation
 
-Welcome to the **GISwater Custom Documentation**, an optimized and tailored guide for your organization's use of GISwater. Fast, dynamic, and built to adapt to your needs, this documentation is structured to give you the best experience while navigating your GISwater functions.
+Welcome to the **Giswater Custom Documentation**, an optimized and tailored guide for your organization's use of Giswater. Fast, dynamic, and built to adapt to your needs, this documentation is structured to give you the best experience while navigating your Giswater functions.
 
 <div style="display: flex; gap: 20px;">
 
   <div style="flex: 1;">
     <h2>🚀 Ultra-fast & Efficient</h2>
-    <p>Our GISwater implementation ensures quick data processing, with optimized workflows for both small and large datasets.</p>
+    <p>Our Giswater implementation ensures quick data processing, with optimized workflows for both small and large datasets.</p>
   </div>
   
   <div style="flex: 1;">
@@ -27,17 +27,17 @@ Welcome to the **GISwater Custom Documentation**, an optimized and tailored guid
 
 Explore the navigation on the left to dive into the various sections, including:
 
-- **General Functions**: Learn about the core features of GISwater.
+- **General Functions**: Learn about the core features of Giswater.
 - **Customer-Specific Functions**: Discover the unique functionalities that have been activated for your organization.
-- **API Documentation**: Integrate GISwater with your other tools using our powerful API.
+- **API Documentation**: Integrate Giswater with your other tools using our powerful API.
 
 <div style="text-align: center;">
-    <a href="1_Introduction/" style="padding: 10px 20px; background-color: orange; color: white; border-radius: 5px; text-decoration: none;">Get Started</a>
+    <a href="introduction/Introduction/" style="padding: 10px 20px; background-color: orange; color: white; border-radius: 5px; text-decoration: none;">Get Started</a>
 </div>
 
 ---
 
-### Why GISwater?
+### Why Giswater?
 
 - **Speed**: Built with efficiency in mind.
 - **Scalability**: Designed to scale with your operations.
