@@ -1,8 +1,24 @@
-site_name: GISwater Documentation
+site_name: Giswater Documentation
 theme:
-  name: material
+  name: gitbook
+  logo: assets/image.avif
+  palette:
+    - scheme: default
+      primary: white
+      accent: light-blue
+    - scheme: slate
+      primary: blue
+      accent: light-blue
+font:
+  text: Open Sans
+  code: Fira Code
+
 nav:
   - Home: index.md
   - 1. Introduction: 1_Introduction.md
   - 2. Necessary software: 2_Necessary_software.md
   - 3. Basic work rules: 3_Basic_work_rules.md
+
+plugins:
+  - search:
+      lang: [en, es]  # Taalcodes
