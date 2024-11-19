@@ -5,8 +5,6 @@ theme:
 
 extra_css:
   - assets/custom.css
-extra_javascript:
-  - assets/lightbox.js
 
 nav:
   - Home: Markdownfiles/index.md
