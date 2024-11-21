@@ -1,4 +1,7 @@
 site_name: Giswater Documentation
+site_url: https://<username>.github.io/<repository-name>/
+use_directory_urls: false
+
 theme:
   name: readthedocs
   logo: assets/giswater.png

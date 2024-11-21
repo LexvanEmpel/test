@@ -25,20 +25,25 @@ jobs:
         with:
           python-version: '3.x'
 
-      - name: Install dependencies
+      - name: Install MkDocs and Dependencies
         run: |
           pip install mkdocs mkdocs-material
 
-      - name: Build MkDocs site
+      - name: Build MkDocs Site
         run: mkdocs build
+
+      - name: Debugging: List Site Files
+        run: ls -R site
+
+      - name: Debugging: Check CSS/JS Files
+        run: |
+          if [ ! -f site/assets/custom.css ]; then echo "custom.css not found"; fi
+          if [ ! -f site/assets/theme_extra.js ]; then echo "theme_extra.js not found"; fi
 
       - name: Add .nojekyll
         run: echo "" > site/.nojekyll
 
-      - name: List built files
-        run: ls -R site
-
-      - name: Upload artifact
+      - name: Upload Artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: './site'
