@@ -1,6 +1,6 @@
 site_name: Giswater Documentation
 theme:
-  name: readthedocs
+  name: material
   logo: assets/giswater.png
   palette:
     - scheme: default
