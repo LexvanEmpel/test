@@ -8,46 +8,38 @@ on:
 permissions:
   contents: write
   pages: write
-  id-token: write
 
 jobs:
   deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      # Stap 1: Haal de repository op
+      - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Setup Python
+      # Stap 2: Installeer Python en MkDocs
+      - name: Setup Python environment
         uses: actions/setup-python@v4
         with:
-          python-version: '3.x'
+          python-version: "3.x"
 
       - name: Install MkDocs and Dependencies
         run: |
           pip install mkdocs mkdocs-material
 
-      - name: Build MkDocs Site
+      # Stap 3: Bouw de MkDocs site
+      - name: Build the MkDocs site
         run: mkdocs build
 
-      - name: Debugging: List Site Files
-        run: ls -R site
-
-      - name: Debugging: Check CSS/JS Files
+      # Stap 4: Commit en Push de site naar de gh-pages branch
+      - name: Deploy to gh-pages branch
         run: |
-          if [ ! -f site/assets/custom.css ]; then echo "custom.css not found"; fi
-          if [ ! -f site/assets/theme_extra.js ]; then echo "theme_extra.js not found"; fi
-
-      - name: Add .nojekyll
-        run: echo "" > site/.nojekyll
-
-      - name: Upload Artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: './site'
-
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git init
+          git remote add origin https://github.com/${{ github.repository }}
+          git checkout -b gh-pages
+          cp -r site/* .
+          git add .
+          git commit -m "Deploy MkDocs site"
+          git push --force origin gh-pages
