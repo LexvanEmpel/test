@@ -2,13 +2,6 @@ site_name: Giswater Documentation
 theme:
   name: material
   logo: assets/giswater.png
-  palette:
-    - scheme: default
-      primary: white
-      accent: light-blue
-    - scheme: slate
-      primary: blue
-      accent: light-blue
 font:
   text: Roboto
   code: Roboto Mono
