@@ -6,7 +6,7 @@ font:
   text: Roboto
   code: Roboto Mono
 nav:
-  - Home: Markdownfiles/index.md
+  - Home: index.md
   - Introduction:
       - Overview: Markdownfiles/introduction/Introduction.md
   - Installation:
