@@ -32,7 +32,7 @@ Explore the navigation on the left to dive into the various sections, including:
 - **API Documentation**: Integrate Giswater with your other tools using our powerful API.
 
 <div style="text-align: center;">
-    <a href="introduction/Introduction/" style="padding: 10px 20px; background-color: orange; color: white; border-radius: 5px; text-decoration: none;">Get Started</a>
+    <a href="markdownfiles/introduction/Introduction/" style="padding: 10px 20px; background-color: orange; color: white; border-radius: 5px; text-decoration: none;">Get Started</a>
 </div>
 
 ---

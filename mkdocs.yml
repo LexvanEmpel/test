@@ -9,9 +9,24 @@ nav:
   - Home: index.md
   - Introduction:
       - Overview: Markdownfiles/introduction/Introduction.md
-  - Installation:
-      - Work Rules: Markdownfiles/installation/Basic_work_rules.md
+  - Installation and Setup:
       - Necessary Software: Markdownfiles/installation/Necessary_software.md
+      - Basic Work Rules: Markdownfiles/installation/Basic_work_rules.md
+  - Working with Giswater:
+      - QGIS Environment: Markdownfiles/getting_started/Working_environment_QGIS.md
+      - How to Digitalize the Network: Markdownfiles/getting_started/Digitalize_network.md
+  - Tools and Advanced Features:
+      - Giswater Plugin: Markdownfiles/tools/Giswater_plugin.md
+      - Toolbox Adjustments: Markdownfiles/tools/Toolbox_adjustments.md
+  - Managing Projects:
+      - Planification Sectors: Markdownfiles/project_management/Planification_sectors.md
+      - Hydraulic Model (Export/Import): Markdownfiles/project_management/Hydraulic_model.md
+  - Data Integration:
+      - Commercial Data: Markdownfiles/data_integration/Commercial_data.md
+  - Additional Information:
+      - Other Considerations: Markdownfiles/additional/Other_considerations.md
+      - Annex: Markdownfiles/additional/annex.md
+
 
 plugins:
   - search

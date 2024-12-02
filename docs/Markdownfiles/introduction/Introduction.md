@@ -18,7 +18,7 @@ Currently Giswater is on the third version of the software, which represents not
 
 As presented on this image , Giswater is located between the applications, which used all together allow a solid and global management in relation to water supply and urban drainage models. The central element of the set is the database, where all the information and most of the functionalities of each Giswater project is located. Giswater uses PostgreSQL database, which together with its PostGIS extension allows to conveniently link it with the next application of the set: QGIS.
 
-![Image](Imagesintro/Applicationschema.png)
+![Image](Images/Applicationschema.png)
 <div style="text-align: center; font-style: italic;">
     Application schema used by Giswater, centralized in the database.
 </div>
