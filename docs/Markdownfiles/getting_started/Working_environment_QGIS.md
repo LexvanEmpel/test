@@ -80,7 +80,7 @@ It is important to know that:
 
 To know how the catalogs work and their relationships through foreign keys and other restrictions to give consistency to the project you can check the Image below, that schematically represents the **hierarchy** under what the item catalog tables follow.
 
-| ![figure 5](images\figure5_schema.avif) |
+| ![figure 5](images\figure5_schema.png) |
 |:------------------------------------------------------------------:|
 | *Schema representing the hierarchy of tables related to the main elements of Giswater.*|
 
