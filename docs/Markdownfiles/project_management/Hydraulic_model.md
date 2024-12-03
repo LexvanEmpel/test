@@ -25,7 +25,7 @@ It should be noted that the sectors selected for export to the hydraulic model m
 
 To select sectors to send to the hydraulic model, we use the basic 'Selector' tool.
 
-| ![figure 8](images\figure8_EPA.png) |
+| ![figure 8](images/figure8_EPA.png) |
 |:------------------------------------------------------------------:|
 | *From the Go 2 EPA tool form you can manage the different options*|
 
@@ -35,11 +35,11 @@ In the case of WS networks, the demand scenarios appear. The demand scenarios al
 
 In a normal case, the relation between point of consumption and value of demand is 1:1 and the main value of demand 'demand', together with consumption pattern *'pattern_id'* are defined in table *'inp_junction'*, as shown in the following image.
 
-![figure 9](images\figure9_INP.avif)
+![figure 9](images/figure9_INP.avif)
 
 Through the *'inp_demand'* table, the user can apply an alternative demand to the main demand of the consumption node and in turn change the demand pattern. To do this, first the new scenario is created in the catalog table *‘cat_dscenario’* and then the node element is linked with the new demand and the scenario to which it belongs, as shown below.
 
-![figure 10](images\figure10_ID.png)
+![figure 10](images/figure10_ID.png)
 
 #### 9.1.1.3 Transformation of nodes into arcs
 
@@ -69,17 +69,17 @@ Every flow regulator labeled as PUMP stores its information in the 'inp_pump' ta
 
 Through the *‘inp_pump_additional’* table, Giswater allows the user to manage more than one pump for a single pump-type element. This table must indicate the id of the parent node, the number of the pump defined in that node with respect to the total number of additional pumps and the working parameters of each of the additional pumps, as shown in the following example:
 
-![figure 11](images\figure11_ID.avif)
+![figure 11](images/figure11_ID.avif)
 
 The example shows two additional pumps of the node '1105', i.e., this node, when exported to the hydraulic model, will be transformed into three pump-type arcs each with their own working parameters.
 
 #### 9.1.1.5 Different simulation options
 
-| ![figure 12](images\figure12_options.avif) |
+| ![figure 12](images/figure12_options.avif) |
 |:------------------------------------------------------------------:|
 | *All possible export options*|
 
-| ![figure 13](images\figure13_options.avif) |
+| ![figure 13](images/figure13_options.avif) |
 |:------------------------------------------------------------------:|
 | *How the most important options are combined: NETWORK GEOMETRY GENERATOR, DEMAND TYPE & PATTERN METHOD*|
 

@@ -18,7 +18,7 @@ It is necessary to fill in the catalogs of elements that will be introduced. Ini
 
 The following scheme shows the hierarchy of existing catalogs within Giswater:
 
-![figure 23](images\figure23_hierarchy.avif)
+![figure 23](images/figure23_hierarchy.avif)
 
 Before the element catalogs, it will be necessary to have some record in the material catalog, both for arcs and for nodes.
 
@@ -42,7 +42,7 @@ Part of the plugin tools are used to digitize, especially those associated with 
 
 Through a practical example, carried out in one of the sample projects of Giswater, it will be explained how a new section of the network can be generated, which will consist of the insertion of 5 new nodes and 4 arcs. All these new elements must be placed in a specific position, as represented in the image below, simulating a real work.
 
-| ![figure 24](images\figure24_visualisation.png) |
+| ![figure 24](images/figure24_visualisation.png) |
 |:------------------------------------------------------------------:|
 | *The elements to be incorporated in this example must be located on the points marked in the image. The exact distances between elements are specified.*|
 
@@ -63,7 +63,7 @@ The elements represented in the image refer to the nodes, which will consist of 
 
 2 - As we see, it is important to configure default values, since many times the insertions of new elements will be made in the same municipality, exploitation, dma and sector. The default values will allow to work faster. For this example, using the configuration tool, we set the default values for *Hydrant catalog, Junction catalog, Valve catalog, Verified* (field not mandatory but recommended), *Exploitation, Municipality, Sector* and *Dma*. The state will be entered manually each time.
 
-| ![figure 25](images\figure25_functions.avif) |
+| ![figure 25](images/figure25_functions.avif) |
 |:------------------------------------------------------------------:|
 | *In the form of Configuration, we mark the default values we want to use for this specific example. These can be modified as many times as the user wants.*|
 
@@ -71,7 +71,7 @@ The elements represented in the image refer to the nodes, which will consist of 
 
 4 - To draw the first support point, which must be 2 meters from the intersection between the street 9110C and arc PVC110-PN16, we will use the 'Create Circle' plugin tool. With the snapping activated, place the cursor over the intersection and click. The radius of the circle must be 2 meters.
 
-| ![figure 26](images\figure26_circle.png) |
+| ![figure 26](images/figure26_circle.png) |
 |:------------------------------------------------------------------:|
 | *The circle of 2 meters radius will be used to place the node in the exact point.*|
 
@@ -81,7 +81,7 @@ The elements represented in the image refer to the nodes, which will consist of 
 
 7 - With the tool 'Add relative point', we mark the first point at the beginning of 9110C street of the Streetaxis layer and another at a certain distance on the same line. This way we can draw a point 12 meters from the beginning (x) and 2 meters towards the outside (y).
 
-| ![figure 28](images\figure28_tool.avif) |
+| ![figure 28](images/figure28_tool.avif) |
 |:------------------------------------------------------------------:|
 | *The second node will be located over the red point, generated using the ‘Add relative point’ tool.*|
 
@@ -91,13 +91,13 @@ The elements represented in the image refer to the nodes, which will consist of 
 
 10 - The first step is to generate a new temporary draft layer (Image below). It must be a linear layer, with the same EPSG as our project has. Once created, we put the layer in edition and click on 'Add spatial object'.
 
-| ![figure 29](images\figure29_capa.png) |
+| ![figure 29](images/figure29_capa.png) |
 |:------------------------------------------------------------------:|
 | *From Layer we can add a new temporary layer*|
 
 11 - With the advanced digitizing panel active, we first select the node from which we want the new line to start. Then we click on the 'Perpendicular' button and select the arc that will serve as a reference to draw the perpendicular line, in this case the Pipe showed in the next image. We should note that a fine auxiliary line is drawn perpendicular to the desired node. Now, we can click on the street axis, thus establishing the first part of the line. Without stopping the edition, we establish a radius of 2 meters in the field where it says 'd', considering that we must be located above the axis of the street. We click again on the auxiliary line, now just above the intersection with the generated 2-meter circle. Once we see that the red line reaches where we want, we click the button to the right of the mouse to end the support line.
 
-| ![figure 30](images\figure30_circle2.png) |
+| ![figure 30](images/figure30_circle2.png) |
 |:------------------------------------------------------------------:|
 | *With the panel of advanced digitizing, it is possible to draw a perpendicular line to another element at the desired distance. The red line represents a section that will be saved in the temporal table. The left side of the circle also has the line slightly painted red.*|
 
@@ -107,7 +107,7 @@ The elements represented in the image refer to the nodes, which will consist of 
 
 14 - With this tool we mark a point on the node 114470 and another one on the support line of the temporal layer. The 'x' must be -4 and 'y' must be 0. As we have clicked on the node first, we select the *Init point* as the exit point of the relative element.
 
-| ![figure 31](images\figure31_cad.avif) |
+| ![figure 31](images/figure31_cad.avif) |
 |:------------------------------------------------------------------:|
 | *The Add Relative Point tool will be used to place a point at a certain distance from another element. The timeline is selected with a box for better viewing.*|
 
@@ -125,7 +125,7 @@ The elements represented in the image refer to the nodes, which will consist of 
 
 21 - We repeat the process of inserting pipeline elements to join all the nodes created during this example, so that the network connects from one side to the other. The final result can be seen in image below.
 
-| ![figure 32](images\figure32_image.png) |
+| ![figure 32](images/figure32_image.png) |
 |:------------------------------------------------------------------:|
 | *The new network section, planned in the first image of this section (6.2), can be seen in this image, so that the nodes and the inserted arcs connect the existing network sections. The new elements are placed exactly where planned, so that the representation of the real network is as accurate as possible.*|
 
@@ -136,11 +136,11 @@ This panel allow users to draw support points or lines to later insert the netwo
 
 In the next image there's a complete schema of the functionality of the panel, since it's not easy to use at the beginning.
 
-| ![figure 33](images\figure33_advanced.avif) |
+| ![figure 33](images/figure33_advanced.avif) |
 |:------------------------------------------------------------------:|
 | *Complete schema of the QGIS Advanced Digitizing Panel. Source: https://pigrecoinfinito.com*|
 
 Complete schema of the QGIS Advanced Digitizing Panel. Source: https://pigrecoinfinito.com
 Previous
 
-![figure 33](images\figure33_advanced.avif)*Figure 1: test.*
+![figure 33](images/figure33_advanced.avif)*Figure 1: test.*

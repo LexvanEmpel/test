@@ -80,7 +80,7 @@ It is important to know that:
 
 To know how the catalogs work and their relationships through foreign keys and other restrictions to give consistency to the project you can check the Image below, that schematically represents the **hierarchy** under what the item catalog tables follow.
 
-| ![figure 5](images\figure5_schema.png) |
+| ![figure 5](images/figure5_schema.png) |
 |:------------------------------------------------------------------:|
 | *Schema representing the hierarchy of tables related to the main elements of Giswater.*|
 
@@ -90,7 +90,7 @@ The first group of layers of the assets inventory is the one related to the zone
 
 All the layers in this group have polygonal geometry - except for macroexploitation, which only appears in a table format for WS projects. It is a particularly important group of layers, since one of the basic rules of the project is the need of every element of the network to be within one of the different zones.
 
-| ![figure 6](images\figure6_mapzone.png) |
+| ![figure 6](images/figure6_mapzone.png) |
 |:------------------------------------------------------------------:|
 | *Representation of one of the areas of the map, specifically one of the sectors that exists in ws_sample*|
 
@@ -157,7 +157,7 @@ In this layer all the completed visits made to the network are found and visuali
 
 The mincut layers propose to the users the valves that should be closed in case of wanting to do some type of operation on any element of the network. Based on the different states and attributes of the elements, the cut polygon will be one or the other. There are several parameters that come into play when using this tool. Mainly we must consider the state (state) and exploitation (exploitation) of the elements that are displayed on the screen, because the tool will be used only in the visible elements.
 
-![Figure 10](images\figure10_node03.png)
+![Figure 10](images/figure10_node03.png)
 
 Since obsolete elements do not have topology (they are not connected to the network), it’s recommended that they are not visible when the tool is used; the elements with state ‘on service’ can be used without any problems to make the cut polygon and, finally, the planned elements can also be part of a cut polygon but we must pay special attention as these can be placed on top of other elements in service and cause errors in the cut polygon.
 
@@ -169,7 +169,7 @@ The layers that are loaded in the QGIS map are those related to the results of t
 * **Mincut result node** (v_om_mincut_node): results of the cut polygon that represent nodes.
 * **Mincut result connec** (v_om_mincut_connec): results of the cut polygon that represent connections.
 
-![Figure 11](images\figure11_flowtrace.avif)
+![Figure 11](images/figure11_flowtrace.avif)
 
 The flowtrace layers show the user the elements of the network that are upstream or downstream of a selected element. The layer updates its fields each time the user performs a new operation to find out the affected elements and these, through a specific symbology, are represented on the map so that they can be easily consulted. As in the cut polygon tool, all the elements that are visible on the map come into play here (they are within the editable views of node, arc and connec).
 
@@ -250,14 +250,14 @@ The layers of SWMM are structured, like EPANET, in layers and tables of entry an
     * **Output result**: the group of model results allows the user to view, both through elements symbolized on the map and through data tables, the results of the SWMM hydraulic model. As in EPANET, it is also possible to compare results with another model previously made.
 * Node flooding: refers to all the water that overflows a node, during the time it has been overflowing, the maximum flow during the flood, as well as the different volumes of water in m2. It is represented in QGIS like this:
 
-![Figure 16](images\figure16_legend.png)
+![Figure 16](images/figure16_legend.png)
 
 * Node surcharge: the overload occurs when the water rises above the crown of the highest conduit. It shows the data referred to hours of overload and maximum and minimum values.
 * Node inflow: represents the total flow input, both laterally and through links. Shows the total, temporary and maximum values.
 * Node depth: average and maximum depth of water. Maximum hydraulic height (HGL) and maximum depth time.
 * Arc flow: this layer represents the percentages of water flow in the network conduits. They are symbolized in QGIS as follows:
 
-![Figure 17](images\figure17_legend2.png)
+![Figure 17](images/figure17_legend2.png)
 
 * Conduit surcharge: in this layer the overload of conduits is represented. Only those with one or more non-zero entries can be displayed. A conduit will be considered overloaded when the slope of the HGL exceeds the slope of the conduit. Data about overload times will be shown in one or both nodes linked to the arc.
 * Pumping summary: different data referred to the operation of the pumps, such as maximum and average flow pumped, consumed energy, percentages of operation times, etc.
@@ -266,7 +266,7 @@ The layers of SWMM are structured, like EPANET, in layers and tables of entry an
 * Outfall flow/load: flows of outfall. Percentage of discharge time, maximum and average discharge flow, total discharge volume, etc.
 * Subcatchment runoff: total values of precipitation, evaporation, infiltration, depth, and volume of the escape of the subcatchment. It is represented by a break coefficient.
 
-![Figure 18](images\figure18_legend3.png)
+![Figure 18](images/figure18_legend3.png)
 
 * Storage volume: data reffered to the deposit. Maximum and average volume in the installation, percentage used, times of use and maximum outflow of the deposit.
 * Subcatchment washoff: total mass of each pollutant that leaves the subcatchment.
@@ -292,7 +292,7 @@ The first step is to assign **prices** to the elements of the network, to the ma
 * **Prices**: in this table are shown the simple prices for each parameter. Most of these are imported from the database and calculations of ITeC (Institute of Construction Technology). The unit field specifies the way to calculate the price (per unit, per cubic meter, etc.)
 * **Compost price**: shows variable prices, since the price of certain elements can not be calculated with a simple price, as it is made up of more than one part. Contains the id's from the previous table. The compost_id can be repeated since a compound element will be formed of more than one simple element (simple_id). The value column represents the percentage of simple element that makes up the composite element. By linking these fields, it will be possible to calculate the total prices.
 
-![Figure 19](images\figure19_note06.png)
+![Figure 19](images/figure19_note06.png)
 
 To calculate the equity value, there is only one table inside the group of *input data:*
 
@@ -322,7 +322,7 @@ In m4sterplan, in addition to planning the network sectors, two types of prices 
 
 To be able to have a reconstruction price assigned, it is necessary to have filled the fields of the catalogs provided for it, so the first thing to do is to fill them in. The next image shows a pipeline with its respective measurements, specifying all the parameters that come into play when calculating prices.
 
-| ![Figure 20](images\figure20_duct.avif) |
+| ![Figure 20](images/figure20_duct.avif) |
 |:------------------------------------------------------------------:|
 | *Representation of the section of a duct with its different measurement parameters*|
 
@@ -452,7 +452,7 @@ There are different foreign keys between the street tables that give consistency
 
 The origin of the data referring to base cartography has nothing to do with Giswater, but must come from other sources, hence the prefix ext in the layers, such as cadastral data services. These layers, despite their external origin, are completely integrated into the Giswater project and have more functionalities besides the simple cartographic representation of the elements, therefore they must have a specific structure, which can be seen in the annex of this manual. These functionalities will be reflected in section **5.2** but are basically of searching.
 
-| ![Figure 22](images\figure22_map.avif) |
+| ![Figure 22](images/figure22_map.avif) |
 |:------------------------------------------------------------------:|
 | *Example of the elements that make up the Basemap group in the Giswater ToC.*|
 

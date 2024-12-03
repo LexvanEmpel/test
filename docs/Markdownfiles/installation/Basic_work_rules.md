@@ -36,7 +36,7 @@ One of the most attractive and representative characteristics of Giswater is the
 
 In this section, the functionality of the main existing elements, which are visually represented in the following image, will be developed. Most of the elements are represented here, although later we will see that there are more.
 
-| ![Beschrijving van de afbeelding](images\figure2_visual_representation.avif) |
+| ![Beschrijving van de afbeelding](images/figure2_visual_representation.avif) |
 |:------------------------------------------------------------------:|
 | *Schematic representation of different elements in Giswater.*            |
 
@@ -91,7 +91,7 @@ Most of these rules have to do with the relationships between tables, which, as 
 
 In addition, it is also essential to understand the functionality of primary keys, the columns that restrict the repetition of fields.
 
-| ![Beschrijving van de afbeelding](images\figure3_script_creation.png) |
+| ![Beschrijving van de afbeelding](images/figure3_script_creation.png) |
 |:------------------------------------------------------------------:|
 | *Creation script of a table sector with references of primary and foreign key.*            |
 
@@ -109,11 +109,11 @@ The following Image  allows to understand the role of each zone and with which e
 
 **SUPPLY MAP ZONES**
 
-![Figure 4](images\figure4_supplymapzones.avif)
+![Figure 4](images/figure4_supplymapzones.avif)
 
 **SANITATION MAP ZONES**
 
-| ![Figure 5](images\figure5_santitationmapzones.avif) |
+| ![Figure 5](images/figure5_santitationmapzones.avif) |
 |:------------------------------------------------------------------:|
 | *Representative diagram of the different areas of the map and the elements that may belong to them*|
 
@@ -129,7 +129,7 @@ The aim of roles is to improve security, preventing users without permission fro
 
 The roles available are:
 
-![Figure 6](images\figure6_roles.avif)
+![Figure 6](images/figure6_roles.avif)
 
 All roles with a higher hierarchy automatically acquire lower role permissions, that is why they are sorted according to the importance and permissions they have.
 
@@ -159,7 +159,7 @@ The definition of geospatial topology says: "The topology expresses the spatial 
 
 Before explaining the usual topological rules, it must be taken into account that Giswater has certain conditions in relation to the states of the elements, which we call **state topology**. In the following table you can see all the types of modifications (insert or update) between arc and node elements and if they can be carried out taking into account the state of the elements. Above the table you can see the different states available for the elements in Giswater:
 
-![Figure 7](images\figure7_topology.avif)
+![Figure 7](images/figure7_topology.avif)
 
 The state type that has the most restrictive conditions is **Planified**. Operating with elements in state = 2 is only possible for users with the role of masterplan or higher and it must be kept in mind that the management of these elements can break the topology.
 
@@ -255,13 +255,13 @@ When adding a new node of one of the listed types, a square polygon will be imme
 
 To work with this type of double-geometric elements it is important to set a configuration that manages it. You can enable or disable this function in the *config* table, *insert_double_geometry* field. If it is enabled (recommended), the *buffer_value* field assigns a default value of the side length of the polygon square. As already said, this square can be edited to have the desired shape.
 
-![Figure 9](images\figure9_summarize.avif)
+![Figure 9](images/figure9_summarize.avif)
 
 ## **3.8 Summary of work rules applied to the insertion of a NODE element**
 
 To finish this section of basic work rules, an example scheme is presented to summarize all the work rules that need to be followed in the process of inserting a new node element. In the example scheme, the mandatory fields for insertion are defined and the steps to follow for the insertion to be correct can be viewed using arrows. The process is also shown in case insertion is not possible.
 
-![Figure 9](images\figure10_process.avif)
+![Figure 9](images/figure10_process.avif)
 
 Summary schema of the steps that need to be followed in the process of insertion of a node type element. The green lines represent successful steps; the red lines show the different scenarios in which the insertion will not be correct.
 

@@ -30,7 +30,7 @@ Related arcs can be entered in the following ways:
 
 !!! info "The sections that **appear in the Relations tab from an automatic process** can be easily identified through the addparam column, which informs if it is an arc division ('parents' or 'children') or replacement process node ('generated' or 'decommissioned')."
 
-| ![figure 1](images\figure1_relations.png) |
+| ![figure 1](images/figure1_relations.png) |
 |:------------------------------------------------------------------:|
 | *Image 101: Various examples of records in the Arc tab of a psector's relations.* 
 
@@ -60,7 +60,7 @@ Related nodes can be introduced in the following ways:
 
 As seen in section [#Arc](/markdownfiles/project_management/Planification_sectors/#arc), when locating Planned nodes on sections, various processes of section division will take place with the commented results.
 
-| ![figure 2](images\figure2_records.png) |
+| ![figure 2](images/figure2_records.png) |
 |:------------------------------------------------------------------:|
 | *Image 102: Several examples of records in the Node tab of the relations of a psector.* 
 
@@ -74,7 +74,7 @@ Related connecs or gullys (hereafter connections) can be introduced in various w
 
 * With the substitution of any section that has connections using the methods described in sections [#Arc](/markdownfiles/project_management/Planification_sectors/#arc) and [#node](/markdownfiles/project_management/Planification_sectors/#node). All the affected connections will enter relations with *State=1, Doable=False*. It can be modified later if you want to unsubscribe or change the link.
 
-| ![figure 3](images\figure3_connect.png) |
+| ![figure 3](images/figure3_connect.png) |
 |:------------------------------------------------------------------:|
 | *Image 103: Various examples of records in the Connect tab of a psector's relations.*|
 
@@ -86,7 +86,7 @@ In the Relations tab of the form there is a specific button (Image 104) to be ab
 
 On the elements selected in the table, you can click the button and choose if you want to change the state or the doable. In either case, what the program will do is change the value from 1 to 0 or vice versa and from true to false or vice versa.
 
-| ![figure 4](images\figure4_image.png) |
+| ![figure 4](images/figure4_image.png) |
 |:------------------------------------------------------------------:|
 | *Image 104: Button to change the State or Doable of the elements in psector.*|
 
@@ -108,7 +108,7 @@ This second case serves to change the way of connection using the psector. To do
 
     b. Use the **Set arc_id** tool from the connections tab of the psector. On the selected rows you can establish which section you want to connect to. The connection point can be established as the closest place of the selected section (*Set closest point*) or the exact place where the section has been clicked (*Set user click*).
 
-| ![figure 5](images\figure5_button.png) |
+| ![figure 5](images/figure5_button.png) |
 |:------------------------------------------------------------------:|
 | *Image 105: Button to establish a new arc_id in the connections in psector.*|
 
@@ -135,12 +135,12 @@ There are 5 different psector states, with its related actions:
 * **EXECUTED (Set OPERATIVE and Save Trace)** - The elements that **were planified** will become **OPERATIVE state**. The elements that **were planned to be removed** from the psector will become **OBSOLETE state**. In order to also mantain traceability, related features will be inserted to traceability tables with Execute psector action.
 * **CANCELED (Save Trace)** - Realted features will be inserted to traceability tables with Cancel psector action.
 
-| ![figure 6](images\figure6_states.png) |
+| ![figure 6](images/figure6_states.png) |
 |:------------------------------------------------------------------:|
 | *Image 106: Form of a psector where the available states are shown.*|
 
 Traceability tables are **ready to load** onto QGIS project using Giswater's Load Layers button. By default, a useful symbology will be setted to establish a **visual difference between planified features, obsolete features and affected features**. Of course this simbology can be modified by user to set a more accurate style according to the needs.
 
-| ![figure 7](images\figure7_psector.png) |
+| ![figure 7](images/figure7_psector.png) |
 |:------------------------------------------------------------------:|
 | *Image 106: Form of a psector where the available states are shown.*|
