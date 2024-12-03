@@ -1,112 +1,206 @@
-5. Giswater Plugin
-5.1 Plugin tools
+# 5. Giswater Plugin
+
+## 5.1 Plugin tools
+
 One of the biggest and most notable improvements of the 3rd version of Giswater, comparing to previous versions, can be found in the plugin tools. Not only have new capabilities been added, but existing tools have been enhanced one by one.
+
 The Giswater plugin is the part of the software with which the user should become more familiar since most of the actions that he wants to carry out can be done using the tools available in the plugin. In one way or another, everything you want to do on your network can be done using the plugin and the buttons it incorporates.
-Giswater currently has up to 38 tools available, divided into different toolbars that must be associated with the six roles that exist in Giswater. In addition to these management tools within the projects, starting from the version 3.1.105, a button has been incorporated that includes the functionalities of creating, modifying, and updating schemes.
+
+Giswater currently has up to **38 tools** available, divided into different toolbars that must be associated with the six roles that exist in Giswater. In addition to these management tools within the projects, starting from the version 3.1.105, a button has been incorporated that includes the functionalities of creating, modifying, and updating schemes.
+
 Button apart from the plugin toolbars:
-Next, the functionality and objective of each of the tools will be detailed, apart from the general project management tool that was already explained in section 2.4.2 of this manual.
-5.2 Toolbars
-5.2.1 Basics
+
+![figure 1](images2/figure1_toolbar.png)
+
+Next, the functionality and objective of each of the tools will be detailed, apart from the general project management tool that was already explained in section **2.4.2** of this manual.
+
+## 5.2 Toolbars
+
+### 5.2.1 Basics
+
 This group of consulting tools is related to the basic role of Giswater. They are tools that allow to select and consult the data, but still without the capacity to modify it. Even so, its use is especially important, since the fact of selecting one or another parameter, for example, the states of the elements, will modify the behavior of other tools.
+
 5.2.1.1 Info
+![figure 2](images2/figure2_info.png)
+
 The Giswater info button allows you to make an 'info' on the different elements of the supply and sanitation networks.
+
 As a result of using this button, the info will return the custom form of the selected element. In addition, it is not necessary to have the active layer of QGIS that contains the element that we want to select.
+
 This button will only work with the following layers of the ToC:
-v_edit_node
-v_edit_arc
-v_edit_connec
-v_edit_gully
-v_edit_om_visit
-v_edit_dimensions
-Those elements have also an associated form, designed one by one according to their specific attributes fields. When using this tool, a form of the element will appear in your window, and you will be able to have access to more detailed information, distributed in different tabs according to their category. In general, forms are similar. The example of the image below represents the different parts of a form of a Node Element (manhole) of a UD project.  
-Attribute form of a Manhole type element. Most of the element forms are very similar to this one, which serves as an example to see the distribution of the different attributes and tabs.
-Forms of the elements
-Data: information related to the element's own attributes. In the tables located in the annex of the manual, you can check the fields that each element has, which should be shown in this tab of the form. It is also distributed in different sections.
-Main data: basic information common among most elements, such as start dates, codes, soil, elevations, and depths, etc.
-Additional data: additional information of the element. It contains the address data and optionally added information.
-Relations: shows a table of other elements that are linked only to this element. They are usually not connected to the network, as the main element must be large enough to contain its related elements. The relations, depending on the type of project and the type of element, can be:
-Element: in this tab other elements are shown, not connected to the network, which are linked to the element that we are visualizing. From the form itself, you can link, unlink, and add elements of this type.
-Hydrometer (only for connec type elements, WS schemas): relates connections with hydrometers and can show their values, besides connecting or disconnecting them. 
-Document: this tab shows the documents related to the element which is being visualized. Documents can be linked, unlinked, and added from the form itself, as well as categorized by date and document type. 
-O&M: the events related to the element we are viewing are shown. Each event is part of a visit, which can be consulted using a button within the form. You can also add visits, view photos and documents related to the events. 
-Scada (only for node type elements): related to the values that come from the SCADA system for the element we are viewing.
-Cost (only for node and arc type elements): allows to calculate the cost of the element which is being visualized. For node-type elements, only two parameters come into play (price per unit or price per meter of depth). For arc elements, there are many more variables that are necessary when calculating the price and they are all specified in this last section of the form.
-If you want to make info from any other layer, you will have to use the usual QGIS info.
-5.2.1.2 Selector
+
+* v_edit_node
+* v_edit_arc
+* v_edit_connec
+* v_edit_gully
+* v_edit_om_visit
+* v_edit_dimensions
+
+**Those elements have** also an associated form, designed one by one according to their specific attributes fields. When using this tool, a form of the element will appear in your window, and you will be able to have access to more detailed information, distributed in different **tabs** according to their category. In general, forms are similar. The example of the image below represents the different parts of a form of a Node Element (manhole) of a UD project.
+
+| ![Figure 3](images2/figure3_manhole.png) |
+|:------------------------------------------------------------------:|
+| *Attribute form of a Manhole type element. Most of the element forms are very similar to this one, which serves as an example to see the distribution of the different attributes and tabs.*|
+
+**Forms of the elements**
+
+* **Data**: information related to the element's own attributes. In the tables located in the annex of the manual, you can check the fields that each element has, which should be shown in this tab of the form. It is also distributed in different sections.
+    * Main data: basic information common among most elements, such as start dates, codes, soil, elevations, and depths, etc.
+    * Additional data: additional information of the element. It contains the address data and optionally added information.
+
+![figure 4](images2/figure4_connections.png)
+
+* **Relations**: shows a table of other elements that are linked only to this element. They are usually not connected to the network, as the main element must be large enough to contain its related elements. The relations, depending on the type of project and the type of element, can be:
+
+![figure 5](images2/figure5_relations.png)
+
+* **Element**: in this tab other elements are shown, not connected to the network, which are linked to the element that we are visualizing. From the form itself, you can link, unlink, and add elements of this type.
+* **Hydrometer** (***only for connec type elements, WS schemas***): relates connections with hydrometers and can show their values, besides connecting or disconnecting them. 
+* **Document**: this tab shows the documents related to the element which is being visualized. Documents can be linked, unlinked, and added from the form itself, as well as categorized by date and document type. 
+* **O&M**: the events related to the element we are viewing are shown. Each event is part of a visit, which can be consulted using a button within the form. You can also add visits, view photos and documents related to the events. 
+* **Scada** (***only for node type elements***): related to the values that come from the SCADA system for the element we are viewing.
+* **Cost** (***only for node and arc type elements***): allows to calculate the cost of the element which is being visualized. For node-type elements, only two parameters come into play (price per unit or price per meter of depth). For arc elements, there are many more variables that are necessary when calculating the price and they are all specified in this last section of the form.
+
+!!! info "If you want to make info from any other layer, you will have to use the usual QGIS info."
+
+**5.2.1.2 Selector**
+![figure 6](images2/figure6_selector.png)
+
 The selector tool groups in a single button the different filters that can be applied to the visualization of the network.
+
 Allows you to filter by:
-Explotation
-Network state (OBSOLETE, IN SERVICE, PLANNED)
-Customer state (hydrometer tables)
-Existing planning sectors
-Hydraulic Sectors (to send them or not to the generation of the hydraulic model)
+
+* Explotation
+* Network state (OBSOLETE, IN SERVICE, PLANNED)
+* Customer state (hydrometer tables)
+* Existing planning sectors
+* Hydraulic Sectors (to send them or not to the generation of the hydraulic model)
+
 Its use is quite simple; You just have to go to the desired tab and select the values that we want to see or stop seeing. Automatically in our canvas we will see how entities appear or disappear depending on the filters applied.
- Tool form, which can be opened in the middle of the screen or dockerized on the right side of the screen (as in the example). In the different tabs we can operate with the filters.
-5.2.1.3 Searcher
+
+| ![Figure 7](images2/figure7_map.png) |
+|:------------------------------------------------------------------:|
+| *Tool form, which can be opened in the middle of the screen or dockerized on the right side of the screen (as in the example). In the different tabs we can operate with the filters.*|
+
+**5.2.1.3 Searcher**
+
+![Figure 8](images2/figure8_search.png)
+
 The Giswater search engine allows to search and select elements of the network or the address. There are five different tabs within the search engine, each with different search parameters.
+
 We will see tab by tab the use of the searcher:
-Network (network elements): allows to search for specific elements of the network. First the type of element must be selected, and then write what we want to search for, either the id or an element type. In the drop-down all the available ones will be filtered showing their id and catalog. Selecting one of the filters will zoom to the element, which will be centered in the middle of the interface. It works with the project system layers, which is a reason to always have them loaded in the project.
-Hydrometer: it allows to search for hydrometers, which must always be related to connecs. In the first drop-down list the exploitation we want must be selected. Then, it is possible to search among all the hydrometers of that exploitation. The hydrometer_customer_code, connec_customer_code and hydrometer state will be displayed. When selecting a record, the tool will automatically open the hydrometer form and will zoom in to the corresponding connec. All the parameters that are used in this browser tab are customizable by the user in the config_param_system table.
-Address: the third tab of the searcher is related to the street map, loaded in the last group of Giswater layers. It allows to search for municipalities, streets, or specific portal numbers. To use it, the fields of the ext_municipality, ext_streetaxis and ext_address tables must be correctly filled out. First you will have to choose a municipality in the Municipality drop-down. You can then choose a street in the Street drop-down. Selecting a street will zoom to its extension. Finally, with the street selected, you can choose a street number from the Number drop-down. Clicking on a specific number will zoom to the specific element, centering it on the screen.
-WorkCat (work records): it allows to filter the elements of type node, arc, connec, gully and element according to the work record to which they belong. In the drop-down list, the user can choose a record and after clicking on it, a form containing two tabs will automatically open. The first contains the elements that have the work record selected as the start record. In the second, those who have it will be displayed as a withdrawal file. By clicking on any row of the tables we can open the specific form of the element. In the lower part of each table a summary of the table is added, showing the total of elements of the same type, as well as the total length of the arcs that are part of the selected work record.
-In addition, in this window it is possible to export the information presented in the tables into csv file. To do this you only have to set the save path and click in the Export to csv button.
+
+![Figure 9](images2/figure9_tab.png)
+
+* **Network** *(network elements)*: allows to search for specific elements of the network. First the type of element must be selected, and then write what we want to search for, either the id or an element type. In the drop-down all the available ones will be filtered showing their id and catalog. Selecting one of the filters will zoom to the element, which will be centered in the middle of the interface. It works with the project system layers, which is a reason to always have them loaded in the project.
+
+![Figure 10](images2/figure10_network.png)
+
+* **Hydrometer**: it allows to search for hydrometers, which must always be related to connecs. In the first drop-down list the exploitation we want must be selected. Then, it is possible to search among all the hydrometers of that exploitation. The *hydrometer_customer_code*, *connec_customer_code* and hydrometer *state* will be displayed. When selecting a record, the tool will automatically open the hydrometer form and will zoom in to the corresponding connec. All the parameters that are used in this browser tab are customizable by the user in the *config_param_system* table.
+
+![Figure 11](images2/figure11_address.png)
+
+* **Address**: the third tab of the searcher is related to the street map, loaded in the last group of Giswater layers. It allows to search for municipalities, streets, or specific portal numbers. To use it, the fields of the *ext_municipality*, *ext_streetaxis* and *ext_address* tables must be correctly filled out. First you will have to choose a municipality in the *Municipality* drop-down. You can then choose a street in the *Street* drop-down. Selecting a street will zoom to its extension. Finally, with the street selected, you can choose a street number from the *Number* drop-down. Clicking on a specific number will zoom to the specific element, centering it on the screen.
+
+![Figure 12](images2/figure12_workcat.png)
+
+* **WorkCat** *(work records)*: it allows to filter the elements of type *node*, *arc*, *connec*, *gully* and *element* according to the work record to which they belong. In the drop-down list, the user can choose a record and after clicking on it, a form containing two tabs will automatically open. The first contains the elements that have the work record selected as the start record. In the second, those who have it will be displayed as a withdrawal file. By clicking on any row of the tables we can open the specific form of the element. In the lower part of each table a summary of the table is added, showing the total of elements of the same type, as well as the total length of the arcs that are part of the selected work record.
+
+In addition, in this window it is possible to export the information presented in the tables into csv file. To do this you only have to set the save path and click in the *Export to csv* button.
+
 On the map, we will draw a polygon that indicates the limits of all the elements of the network related to the selected work record, to which we will zoom. When closing the form, this polygon disappears.
-Work record searcher form. It allows to eexportingxport the information to csv.
-Psector: The last tab of the searcher allows to search for the different planification sectors generated in the project. The use is quite simple: you just have to choose the name of the psector that we want to find in the drop-down tool. When you click, the form associated with the corresponding psector will automatically open, where we will have the possibility to edit the information, see the linked elements, add prices or documents, etc. The searcher also zooms to the geometry of the specific psector.
-5.2.2 Operations and management
+
+| ![Figure 13](images2/figure13_polygon.png) |
+|:------------------------------------------------------------------:|
+| *Work record searcher form. It allows to eexportingxport the information to csv.*|
+
+![Figure 14](images2/figure14_psector.png)
+
+* **Psector**: The last tab of the searcher allows to search for the different planification sectors generated in the project. The use is quite simple: you just have to choose the name of the psector that we want to find in the drop-down tool. When you click, the form associated with the corresponding psector will automatically open, where we will have the possibility to edit the information, see the linked elements, add prices or documents, etc. The searcher also zooms to the geometry of the specific psector.
+
+### 5.2.2 Operations and management
+
 This group of tools is designed to perform or simulate actions on the actual network of water supply or urban drainage. Some of them will be used directly from the location of the element in the field, to report information on its status at the same time, others from the office, but always focused on the actual use of the elements.
+
 This O&M toolbar is the only one of the plugin where there are big differences between WS and UD projects. There are some tools that are only for water supply and others that are exclusive for urban drainage. As usual, a clear distinction will be made when detailing the operations.
+
 However, there are several common tools in this toolbar, such as those related to the management of visits and events. The visits to elements are made by a worker in the field, who can add the information directly to the tables specially designed for this function through a mobile device.
-5.2.2.1 Minimum Cut Polygon
+
+**5.2.2.1 Minimum Cut Polygon**
+
+![Figure 15](images2/figure15_polygon.png)
+
 The mincut polygon functionality is surely one of the most important that a drinking water network manager needs to operate for its daily functioning. In this section it will be explained how the internal work logic of the database is developed.
+
 The mincut polygon propagates flows from the elements that supply water to the network and then proposes the valves that should be closed in case of wanting to leave a specific point without water supply.
-First, there are several previous aspects about the data that are strictly necessary for the tool to work correctly:
-Pgrouting library is used for this process.
-All arc and node elements must have state and state_type fields filled. The state type must be one that is operational. This can be seen in the value_state_type table in the is_operative field, which must be TRUE. In case of FALSE, the element will not enter the cutting polygon process.
-The network traceability is made from the node_1 and node_2 of the elements type arc, that is why the network must have topology.
-The identifiers (id) of arcs and nodes must be integer.
-The table man_valve must have filled in the values closed and broken fields, which by default will be FALSE.
-The cutting polygon works in the context of the exploitations system defined by the user in the table config_graph_inlet. This table must define exactly which are the nodes that provide water to the system (usually source or tank) and to which exploitation they belong.
-The type of valves that participate in the cutting polygon must be configured. This can be done from the table config_graph_valve or through the plugin. Usually, they are only the shutoff valves.
-For mincut there are three different types of states (not to be confused with the states of the elements of the network). These are defined in the table om_typevalue and are:
-typevalue id idval
-mincut_state
-0
-Planified
-mincut_state
-1
-In Progress
-mincut_state
-2
-Finished
-mincut_state
-3
-Canceled
-mincut_state
-4
-On planning
-Once all the mentioned aspects are controlled the tool can be used. Clicking on the button opens the mincut form, where, in the first place we should pay attention to the top toolbar. Here it is possible to distinguish the mincut types and the configuration of the tool. In the configuration the types of valves that enter process can be selected.
-Toolbar of the mincut form. From here it is possible to select the type of polygon that will be performed.
+
+First, there are several **previous aspects** about the data that are strictly necessary for the tool to work correctly:
+
+1. *Pgrouting* library is used for this process.
+2. All *arc* and *node* elements must have *state* and *state_type* fields filled. The state type must be one that is operational. This can be seen in the *value_state_type* table in the *is_operative field*, which must be TRUE. In case of FALSE, the element will not enter the cutting polygon process.
+3. The network traceability is made from the node_1 and node_2 of the elements type arc, that is why the network must have topology.
+4. The identifiers (*id*) of arcs and nodes must be *integer*.
+5. The table *man_valve* must have filled in the values *closed* and *broken* fields, which by default will be *FALSE*.
+6. The cutting polygon works in the context of the exploitations system defined by the user in the table *config_graph_inlet*. This table must define exactly which are the nodes that provide water to the system (usually source or tank) and to which exploitation they belong.
+7. The type of valves that participate in the cutting polygon must be configured. This can be done from the table *config_graph_valve* or through the *plugin*. Usually, they are only the shutoff valves.
+8. For mincut there are three different types of states (not to be confused with the states of the elements of the network). These are defined in the table *om_typevalue* and are:
+
+| typevalue     | id  | idval       |
+|---------------|-----|-------------|
+| mincut_state  | 0   | Planified   |
+| mincut_state  | 1   | In Progress |
+| mincut_state  | 2   | Finished    |
+| mincut_state  | 3   | Canceled    |
+| mincut_state  | 4   | On planning |
+
+Once all the mentioned aspects are controlled the tool can be used. Clicking on the button opens the *mincut* form, where, in the first place we should pay attention to the top toolbar. Here it is possible to distinguish the *mincut* types and the configuration of the tool. In the configuration the types of valves that enter process can be selected.
+
+| ![Figure 16](images2/figure16_hydrometer.png) |
+|:------------------------------------------------------------------:|
+| *Toolbar of the mincut form. From here it is possible to select the type of polygon that will be performed.*|
+
 As showed in the image above, there are three types of mincut polygon. The one with the most developed functionality is number 1, which proposes the valves to be closed to leave a specific location without water supply.
+
 How to use the three types of mincut:
-Network mincut – Class 1
+
+* ***Network mincut– Class*** **1**
+
 To make a mincut polygon of type 1 the form must be filled (image below) with the different parameters:
-Work order: work record (optional).
-Street map: situation of the point that won’t have water (formed by the fields municipality, postal code, street and number).
-Type: may be demo, real or test, depending on whether the water cut is going to take place or is just a test to see which would be the results.
-Cause: Accidental or planned.
-Start and end date: in this case they are to make a forecast.
-User: name of the user assigned to this process.
-Description: to add additional information in text format for the specific case.
+
+* Work order: work record (optional).
+* Street map: situation of the point that won’t have water (formed by the fields municipality, postal code, street and number).
+* Type: may be demo, real or test, depending on whether the water cut is going to take place or is just a test to see which would be the results.
+* Cause: Accidental or planned.
+* Start and end date: in this case they are to make a forecast.
+* User: name of the user assigned to this process.
+* Description: to add additional information in text format for the specific case.
+
 Now the state of the cutting polygon will be planned, but, as we will see, the state is automatically modified depending on the process. At this moment it is time to click the button that will allow to choose the point of the network where the water will be cut.
+
 With the cursor we must be placed over the desired point, which can be either an arc or a node. By clicking, the cutting polygon will be automatically made, which should show the valves that will have to be closed and all the elements that will be affected (sections, nodes, and connections).
-Form of the cutting polygon, the same for the three types of polygon. This has different functions and fields that will be activated or not depending on the state of the polygon
+
+| ![Figure 17](images2/figure17_mincut.png) |
+|:------------------------------------------------------------------:|
+| *Form of the cutting polygon, the same for the three types of polygon. This has different functions and fields that will be activated or not depending on the state of the polygon*|
+
 To offer this information mincut has different tables where the results are stored depending on the type of element:
-View of the map with the cutting polygon made. The symbology clearly shows the valves to be closed, as well as the affected sections, nodes and connecs.
+
+![Figure 18](images2/figure18_mincut.png)
+
+| ![Figure 19](images2/figure19_map.png) |
+|:------------------------------------------------------------------:|
+| *View of the map with the cutting polygon made. The symbology clearly shows the valves to be closed, as well as the affected sections, nodes and connecs.*|
+
 All these tables store the information of the element and the identifier of the cutting polygon and allow to clearly visualize on the map the affectation of the process, as shown in the above image.
+
 At this moment, the second button of the mincut toolbar is activated, which will allow, optionally, to choose a valve that for whatever reason will not be able to be closed. By clicking on the button, we choose the valve, and the results of the process will be recalculated considering the modification.
-With the completed polygon and knowing that all the marked valves can be effectively closed, it is time for the second tab of the form (Exec). By clicking on Start, the rest of the fields will be activated, the start date and time will be set, and the process status will change to In Progress. We can add an additional description during the process and other fields such as distance from the building or depth.
-If it is a mincut test usually the duration will be noticeably short, as we only want to see the affectation; on the other hand, if the mincut is real, we can click OK and leave the process in this state until, when the time comes, by clicking End to finish and change the state to Finished. By clicking End opens another small form to specify, if necessary, the location and dates of the process. By clicking OK in this last form, this cutting polygon will be permanently closed and stored without the possibility of editing it again.
+
+With the completed polygon and knowing that all the marked valves can be effectively closed, it is time for the second tab of the form (Exec). By clicking on *Start*, the rest of the fields will be activated, the start date and time will be set, and the process status will change to *In Progress*. We can add an additional description during the process and other fields such as distance from the building or depth.
+
+If it is a *mincut* test usually the duration will be noticeably short, as we only want to see the affectation; on the other hand, if the *mincut* is real, we can click *OK* and leave the process in this state until, when the time comes, by clicking *End* to finish and change the state to *Finished*. By clicking *End* opens another small form to specify, if necessary, the location and dates of the process. By clicking *OK* in this last form, this cutting polygon will be permanently closed and stored without the possibility of editing it again.
+
+![Figure 20](images2/figure20_settings.png)
+
 Form fields that are only activated when the polygon has started.
 Connec mincut – Class 2
 To perform a type 2 mincut, in the same way as in 1, the form must be filled in with the location, dates and mincut details. Then, click in the button to start the process:
