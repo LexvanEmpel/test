@@ -5,26 +5,29 @@ theme:
 font:
   text: Roboto
   code: Roboto Mono
+markdown_extensions:
+  - attr_list
+  - admonition
 nav:
   - Home: index.md
   - Introduction:
-      - Overview: Markdownfiles/introduction/Introduction.md
+      - 1. Overview: Markdownfiles/introduction/Introduction.md
   - Installation and Setup:
-      - Necessary Software: Markdownfiles/installation/Necessary_software.md
-      - Basic Work Rules: Markdownfiles/installation/Basic_work_rules.md
+      - 2. Necessary Software: Markdownfiles/installation/Necessary_software.md
+      - 3. Basic Work Rules: Markdownfiles/installation/Basic_work_rules.md
   - Working with Giswater:
-      - QGIS Environment: Markdownfiles/getting_started/Working_environment_QGIS.md
-      - How to Digitalize the Network: Markdownfiles/getting_started/Digitalize_network.md
+      - 4. QGIS Environment: Markdownfiles/getting_started/Working_environment_QGIS.md
+      - 6. How to Digitalize the Network: Markdownfiles/getting_started/Digitalize_network.md
   - Tools and Advanced Features:
-      - Giswater Plugin: Markdownfiles/tools/Giswater_plugin.md
-      - Toolbox Adjustments: Markdownfiles/tools/Toolbox_adjustments.md
+      - 5. Giswater Plugin: Markdownfiles/tools/Giswater_plugin.md
+      - 7. Toolbox Adjustments: Markdownfiles/tools/Toolbox_adjustments.md
   - Managing Projects:
-      - Planification Sectors: Markdownfiles/project_management/Planification_sectors.md
-      - Hydraulic Model (Export/Import): Markdownfiles/project_management/Hydraulic_model.md
+      - 8. Planification Sectors: Markdownfiles/project_management/Planification_sectors.md
+      - 9. Hydraulic Model (Export/Import): Markdownfiles/project_management/Hydraulic_model.md
   - Data Integration:
-      - Commercial Data: Markdownfiles/data_integration/Commercial_data.md
+      - 10. Commercial Data: Markdownfiles/data_integration/Commercial_data.md
   - Additional Information:
-      - Other Considerations: Markdownfiles/additional/Other_considerations.md
+      - 11. Other Considerations: Markdownfiles/additional/Other_considerations.md
       - Annex: Markdownfiles/additional/annex.md
 
 
