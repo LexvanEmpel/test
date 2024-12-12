@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>4. QGIS Environment - Giswater Documentation</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "4. QGIS Environment";
+        var mkdocs_page_input_path = "Markdownfiles\\getting_started\\Working_environment_QGIS.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../..">
+          <img src="../../../assets/giswater.png" class="logo" alt="Logo"/>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Introduction</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../introduction/Introduction/">1. Overview</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Installation and Setup</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../installation/Necessary_software/">2. Necessary Software</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../installation/Basic_work_rules/">3. Basic Work Rules</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Working with Giswater</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">4. QGIS Environment</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#41-graphic-interface">4.1 Graphic interface</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#42-table-of-contents">4.2 Table of Contents</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#421-inventory-of-assets-inventory">4.2.1 Inventory of assets (INVENTORY)</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#4211-catalogs">4.2.1.1 Catalogs</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#4212-map-zones">4.2.1.2 Map zones</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#4213-network-elements-network">4.2.1.3 Network elements (Network)</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#4214-others">4.2.1.4 Others</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#422-operations-and-management-om">4.2.2 Operations and management (O&amp;M)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#423-epa-analysis">4.2.3 EPA Analysis</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#4231-epanet">4.2.3.1 EPANET</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#4232-swmm">4.2.3.2 SWMM</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#424-masterplan">4.2.4 Masterplan</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#4241-planification-sectors-psectors">4.2.4.1 Planification sectors (psectors)</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#4242-network-element-price-management">4.2.4.2 Network element price management</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#425-admin">4.2.5 Admin</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#426-basemap">4.2.6 Basemap</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Giswater_plugin/">5. Giswater Plugin</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Digitalize_network/">6. How to Digitalize the Network</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Tools and Advanced Features</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tools/Toolbox_adjustments/">7. Toolbox Adjustments</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Managing Projects</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../project_management/Planification_sectors/">8. Planification Sectors</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../project_management/Hydraulic_model/">9. Hydraulic Model (Export/Import)</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Data Integration</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../data_integration/Commercial_data/">10. Commercial Data</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Additional Information</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../additional/Other_considerations/">11. Other Considerations</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../additional/annex/">Annex</a>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../visualization_proposals/visualisations/">visualization proposals</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">Giswater Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Working with Giswater</li>
+      <li class="breadcrumb-item active">4. QGIS Environment</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="4-working-environment-in-qgis"><strong>4. Working environment in QGIS</strong></h1>
+<p>While all GIS systems are compatible with the Giswater tool, the same does not apply to the plugin since it has been programmed as a complement to QGIS. Thus, all the available functionalities will be executed from the QGIS environment.</p>
+<h2 id="41-graphic-interface"><strong>4.1 Graphic interface</strong></h2>
+<p>Any user that requires the use of Giswater plugin must be familiar with geographical information systems (GIS).</p>
+<p>Once the user has created a new data project, with the Giswater tool, as explained in section 2.5, he is already able to open the QGIS project and start working with it. In this manual the example project for water supply (ws_sample) will be used.</p>
+<p>The main parts of the QGIS environment in relation to Giswater and its plugin are shown below.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="figure 1" src="../images/figure1_graphic_interface.avif" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Graphic interface in Qgis</em></td>
+</tr>
+</tbody>
+</table>
+<h2 id="42-table-of-contents"><strong>4.2 Table of Contents</strong></h2>
+<p>The ToC (Table of Contents) is where all the necessary tables and views of the database are loaded to work with Giswater. To have the information well structured, this topic has been divided into seven large groups that will also facilitate the management of roles (depending on the permissions of the user, he should be able to manage certain tables, which by default belong to a group). These groups are: <strong>Inventory of assets, Operations and Maintenance (O&amp;M), EPA Analysis, Masterplan, System tables and Base maps.</strong></p>
+<p>In this section all the tables and views that are loaded in QGIS are described, to facilitate the user understanding of the complex network of tables that Giswater is composed of. Each table has a variable number of fields with information related to what the table represents. As the amount of information in this section would be exceptionally large, most of the definitions of tables and fields are presented in the annex of the manual. However, the user will find below enough information to understand the purpose of each group of tables.</p>
+<p><img alt="Figure 2" src="../images/figure2_note2.png" /></p>
+<h3 id="421-inventory-of-assets-inventory">4.2.1 Inventory of assets (INVENTORY)</h3>
+<p>This group contains some information about the network assets inventory, and it is divided into four subgroups: Catalogs, Map zones, Network elements, and Others.</p>
+<h4 id="4211-catalogs">4.2.1.1 Catalogs</h4>
+<p>First of all, it is important to mention that the catalogs layers on the ToC are mainly distributed into two different subgroups. The first subgroup belongs to the Inventory Layers. This is where we can find our fundamental catalogs, which means preliminary information necessary to build our network system. The second subgroup belongs to the Admin layers, for which you can find more detailed information at the end of this manual chapter. There are other few catalogs on the EPA subgroup, which its content follows the EPA/SWMM hydraulic model logic.</p>
+<p>An image with the two main subgroups that contains the catalogs layers, just as can be found on Qgis ToC, and the layers name on the DB manager can be checked on the images below.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="figure 3" src="../images/figure3_catalogs.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Fundamental and secondary catalogs layers distributed in different subgroups on ToC</em></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="figure 4" src="../images/figure4_catalogs2.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Catalogs layers, with respective nomenclature when visualized on the DB manager.</em></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Fundamental Network Catalogs</strong>  (the name of the table in the database in parentheses)</p>
+<p>Feature catalog (cat_fearture)</p>
+<p>Feature node catalog or Node feature catalog (cat_feature_node)</p>
+<p>Node catalog (cat_node)</p>
+<p>Arc catalog (cat_arc)</p>
+<p>Node material catalog (cat_mat_node)</p>
+<p>Arc material catalog (cat_mat_arc)</p>
+<p>Connec catalog (cat_connec)</p>
+<p><span style="color:#FFD700;">Grate catalog* (cat_grate)</span></p>
+<p><span style="color:#FFD700;">Grate material catalog* (cat_mat_grate)</span></p>
+<blockquote>
+<p>ℹ️ <strong>Yellow colours just apply to UD schemes!</strong></p>
+</blockquote>
+<p><strong>Pre-dependencies:</strong></p>
+<p>Catalogs generate many dependencies, in fact, they must be filled before starting to work since their records will be requested in many system tables. Also, it should be noted that the catalogs also have dependencies between them. In this sense, before filling the arc and node catalogs, the preceding catalogs, which are the node materials and the arc materials, must be filled out. Before starting to work on the catalogs, the system tables that typify the different elements of our network must be filled in (see section <strong>2.5.1.1</strong>):cat_feature_node (for the node catalog case)cat_feature_arc (for the arc catalog case)cat_feature_connec (for the connection catalog case)cat_feature_gully (for the case of gully catalogs in UD)Although they are not loaded in QGIS, it is important to explain at this point how the higher hierarchy catalogs, already mentioned in section <strong>4.2.1.1</strong>, work. It is explained as an example for node, but the explanation can be extrapolated to arc, connec and gully.</p>
+<ul>
+<li><strong>Cat feature node</strong> (<em>cat_feature_node</em>): The table characterizes the different types of node that our project can have. The type of nodes that the system allows - <em>type</em> field, from now on <em>'system node type'</em> - is not modifiable or expandable. What you can do is have as many node type elements as you want - <em>id</em> field, from now on <em>'custom node type'</em> - with the same system <em>node type</em> attribute, as long as this attribute is in the system.</li>
+</ul>
+<p>It is important to know that:</p>
+<ul>
+<li>Each <em>'system node type'</em> has a defined data model, different from the others. If you want to create new records of node types, you must first analyze which of the different data models of the system nodes best suits the new 'node custom type' that we want to create.</li>
+<li>For each <em>'custom node type'</em> we can define a default value of the element type in the hydraulic model. This default value is MANDATORY, but for each network element it can be modified at any time by the hydraulic engineers.</li>
+<li>The <em>'custom node type'</em> allows us to customize the names of the elements in the language we want. This allows that, although the system always works with the <em>'system node type'</em> this will always be transparent for the user who will never see the <em>'system node type'</em> but will always work with the <em>'custom node type'</em>.</li>
+</ul>
+<p>To know how the catalogs work and their relationships through foreign keys and other restrictions to give consistency to the project you can check the Image below, that schematically represents the <strong>hierarchy</strong> under what the item catalog tables follow.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="figure 5" src="../images/figure5_schema.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Schema representing the hierarchy of tables related to the main elements of Giswater.</em></td>
+</tr>
+</tbody>
+</table>
+<h4 id="4212-map-zones">4.2.1.2 Map zones</h4>
+<p>The first group of layers of the assets inventory is the one related to the zones of the map. As its name very well indicates, this group of layers represents and delimits the different territorial zones of the map, already defined in the section <strong>3.4</strong> of this manual.</p>
+<p>All the layers in this group have polygonal geometry - except for macroexploitation, which only appears in a table format for WS projects. It is a particularly important group of layers, since one of the basic rules of the project is the need of every element of the network to be within one of the different zones.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="figure 6" src="../images/figure6_mapzone.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Representation of one of the areas of the map, specifically one of the sectors that exists in ws_sample</em></td>
+</tr>
+</tbody>
+</table>
+<p>The exploitation, specifically, is essential to start any project. As mentioned before, it is highly recommended to add an exploitation value in the properties of the project, using a variable. Thus, the project will be causally related to an exploitation, the area of the map that, in general, will cover a larger area.</p>
+<p>The map zones that Giswater has are the following:</p>
+<ul>
+<li><strong>Exploitation</strong>: exploitation area, usually related to a management area of one or more users.</li>
+<li><strong>Macroexploitation</strong>: group of exploitations.</li>
+<li><strong>Dma</strong>: in the case of WS it is district metering areas, areas to account for the water usage. For UD it is district management areas, management areas of sanitation network. In both cases, they can be delimited according to the needs of the user and always with a coherence of use.</li>
+<li><strong>Macrodma</strong>: a group of dmas.</li>
+<li><strong>Sector</strong>: the sectors are related to the correct functioning of the hydraulic model and therefore they must be consistent with the water inlets and outlets of it. They are delimited according to this coherence as the user considers appropriate.</li>
+<li><strong>Macrosector</strong>: a group of sectors.</li>
+</ul>
+<p>The <strong>complete tables</strong> of this section with a description for each field, as well as the interpretation criteria used, are found in the manual <strong>annex</strong>.</p>
+<h4 id="4213-network-elements-network">4.2.1.3 Network elements (Network)</h4>
+<p>This group contains all those layers referred to the network elements, which have geometry, i.e., and  are graphically represented on the map.</p>
+<p>Once the corresponding catalogs have been completed, the construction of the network can be started by editing these layers. Always following the order marked by the topological rules, as explained in section <strong>3.7</strong>.</p>
+<p>The elements of the network are divided into five layers plus a group for the polygons:</p>
+<ul>
+<li>Node (v_edit_node)</li>
+<li>Arc (v_edit_arc)</li>
+<li>Connec (v_edit_connec)</li>
+<li>Gully (v_edit_gully)</li>
+<li>Link (v_edit_link)</li>
+<li>Polygon element group</li>
+</ul>
+<p>To enjoy the use of GIS, each element has its own associated style that will be displayed in the graphical interface of QGIS. The styles are represented according to the specific type of element (to know which they are, we can consult the sys_feature_cat table).</p>
+<p>In the case of network elements, the differences between project types are exceptionally large. There are very few elements that coincide both in supply and in urban water drainage; that is why no table in this group will be described as a commune.</p>
+<p><img alt="Figure 7" src="../images/figure7_table.png" /></p>
+<p><img alt="Figure 8" src="../images/figure8_table2.png" /></p>
+<h4 id="4214-others">4.2.1.4 Others</h4>
+<p>The elements that are not strictly a part of the water supply or sanitation network but do have a visual representation on the QGIS map, i.e., they have geometry, are in this group. The data of these elements is not indispensable for the use of the hydraulic models which Giswater incorporates, but its information can have interest in other aspects, and, therefore, it is also necessary to get to know its characteristics.</p>
+<p><strong>Common elements</strong></p>
+<ul>
+<li><strong>Dimensioning</strong> <em>(v_edit_dimensions)</em>: this table is filled in when the user uses the plugin tool that allows to calculate distances and dimensions between different points within the QGIS map. The distance is represented by a line and a label with the numerical information in meters. It also shows the depth in case of associating a value to it.</li>
+<li><strong>Samplepoint</strong> <em>(v_edit_samplepoint)</em>: layer with information about sample points. These are the points where the water quality that circulates is analysed. It has a field that relates the sampling point with a laboratory.</li>
+<li><strong>Element</strong> <em>(v_edit_element)</em>: can be any other type of element that needs to be defined in the element catalog. These may or may not be linked with other network elements. They allow to add extra information in relation to some characteristic.</li>
+</ul>
+<p>In the manual <strong>annex</strong>, you may find the <strong>complete tables</strong> of this section with a description for each field, as well as the used interpretation criteria.</p>
+<h3 id="422-operations-and-management-om">4.2.2 Operations and management (O&amp;M)</h3>
+<p>The first group of layers which can be found in the ToC of the Giswater project inside QGIS is the operations and management (O&amp;M). Unlike the previous group (inventory of assets), which has many layers, this one is reduced to a simple group of 2 or 3 layers depending on the type of project and the inventory of visits, common for both types of projects.</p>
+<p>The layers of operations and management are:</p>
+<p><strong>Visits</strong> (v_edit_om_visit)</p>
+<p>In this layer all the completed visits made to the network are found and visualized by means of specific elements on the map. Each visit has a start and end date, as well as an identifier of the user who made the visit. Each visit can contain different events and in the same way each event can have several photographs to illustrate the event. Events are not found in this same layer, but they are related to visits with foreign keys.</p>
+<p><img alt="Figure 9" src="../images/figure9_mincut.avif" /></p>
+<p>The mincut layers propose to the users the valves that should be closed in case of wanting to do some type of operation on any element of the network. Based on the different states and attributes of the elements, the cut polygon will be one or the other. There are several parameters that come into play when using this tool. Mainly we must consider the state (state) and exploitation (exploitation) of the elements that are displayed on the screen, because the tool will be used only in the visible elements.</p>
+<p><img alt="Figure 10" src="../images/figure10_node03.png" /></p>
+<p>Since obsolete elements do not have topology (they are not connected to the network), it’s recommended that they are not visible when the tool is used; the elements with state ‘on service’ can be used without any problems to make the cut polygon and, finally, the planned elements can also be part of a cut polygon but we must pay special attention as these can be placed on top of other elements in service and cause errors in the cut polygon.</p>
+<p>The layers that are loaded in the QGIS map are those related to the results of the mincut polygon according to its geometry and type of element, with its own symbology:</p>
+<ul>
+<li><strong>Mincut init point</strong> (v_om_mincut): represents the starting point of the cut polygon, where the user has clicked for the result to be calculated.</li>
+<li><strong>Mincut result valve</strong> (v_om_mincut_valve): results of the cut polygon that represent valves. The proposed field establishes whether a valve should be closed or not.</li>
+<li><strong>Mincut result arc</strong> (v_om_mincut_arc): results of the cut polygon that represent arcs.</li>
+<li><strong>Mincut result node</strong> (v_om_mincut_node): results of the cut polygon that represent nodes.</li>
+<li><strong>Mincut result connec</strong> (v_om_mincut_connec): results of the cut polygon that represent connections.</li>
+</ul>
+<p><img alt="Figure 11" src="../images/figure11_flowtrace.avif" /></p>
+<p>The flowtrace layers show the user the elements of the network that are upstream or downstream of a selected element. The layer updates its fields each time the user performs a new operation to find out the affected elements and these, through a specific symbology, are represented on the map so that they can be easily consulted. As in the cut polygon tool, all the elements that are visible on the map come into play here (they are within the editable views of node, arc and connec).</p>
+<p>The <strong>use</strong> of this tool is relevant in two different cases:</p>
+<ul>
+<li><strong>Data structuring phase</strong>: if there are arcs that go in the wrong direction, it is easy to detect them by using the flowtrace process, because they will cut the network in an unusual point so its direction can be modified and thus correct the error.</li>
+<li><strong>Consultation phase</strong>: it allows to visualize all the elements that are upstream or downstream of a specific element.</li>
+</ul>
+<p>There are 2 layers and 4 different symbologies:</p>
+<ul>
+<li><strong>Flowtrace arc</strong> <em>(v_anl_flow_arc)</em>: represents the arc type elements for the flow tracking tool. Shows with the corresponding color the arcs that are upstream (flowtrace) or downstream (flow exit) of the selected element.</li>
+</ul>
+<p><img alt="Figure 12" src="../images/figure12_flowtrace2.png" /></p>
+<ul>
+<li><strong>Flowtrace node</strong> <em>(v_anl_flow_node)</em>: represents the node type elements for the flow tracking tool. Shows with the corresponding color the nodes that are upstream or downstream of the selected element.</li>
+</ul>
+<p><img alt="Figure 13" src="../images/figure13_flowtrace3.png" /></p>
+<p>In the section <strong>5.2.2</strong> the use of the plugin tools that are related to this group will be detailed. The Giswater database contains many other tables related to the section O&amp;M, but these are not found in the homonymous group of QGIS, as they will be used in other ToC groups or for various program processes. The purpose of the operations and management tables is to do an inventory and schedule the visits made by technicians to the real supply or sanitation network to control, calculate or do any type of rehabilitation or repair in the network.</p>
+<p>In the manual <strong>annex</strong>, you may find the <strong>complete tables</strong> of this section with a description for each field, as well as the used interpretation criteria.</p>
+<h3 id="423-epa-analysis">4.2.3 EPA Analysis</h3>
+<p>The fourth group of layers found in the ToC is the one related to the hydraulic model (EPANET / SWMM). The behavior of this group is based on the program with the same name, public domain and developed by the United States Environmental Protection Agency (EPA).</p>
+<h4 id="4231-epanet">4.2.3.1 EPANET</h4>
+<p>This is an exclusive group for water supply projects (WS).</p>
+<p><img alt="Figure 14" src="../images/figure14_note04.png" /></p>
+<p>The layers of the EPANET group are divided into two groups:</p>
+<ul>
+<li><strong>Input data</strong>: are all the layers with necessary data for the correct work of the hydraulic model. There are different groups within <em>Input data</em> according to the nature of the data and the type of geometry:<ul>
+<li>Node: formed by geometric layers of node type and related tables.</li>
+<li>Arc: formed by geometric layers of arc type and related tables.</li>
+<li>Controls &amp; Rules: tables of different rules and controls related to data.</li>
+<li>Options: different tables of options related to the hydraulic model.</li>
+<li>Tags and Labels</li>
+</ul>
+</li>
+<li><strong>Output result</strong>: are all the layers that store the results once the hydraulic model has been done. They allow the results to be quickly visualized within the QGIS map and compared with older results. The results (tables with the prefix rpt) are divided into:<ul>
+<li>Node minimum values</li>
+<li>Node maximum values</li>
+<li>Arc maximum values</li>
+<li>Energy usage and Hydraulic status</li>
+</ul>
+</li>
+</ul>
+<p>In chapter <strong>7</strong> of this manual the user will be shown how to implement the hydraulic model of their network through the layers and tables that make up this group.</p>
+<p>In the manual <strong>annex</strong>, you may find the <strong>complete tables</strong> of this section with a description for each field, as well as the used interpretation criteria.</p>
+<h4 id="4232-swmm">4.2.3.2 SWMM</h4>
+<p>Storm Water Management Model (SWMM) is the third group of layers found in the ToC of an urban water drainage and sanitation project (UD). It is the "brother" of EPANET, also developed by the EPA, but whose use and applications are obviously different.</p>
+<p><img alt="Figure 15" src="../images/figure15_note05.png" /></p>
+<p>The layers of SWMM are structured, like EPANET, in layers and tables of entry and exit, adding an intermediate group that will allow the user to establish which sectors and hydrological basins come into play when making the hydraulic model:</p>
+<ul>
+<li><strong>Input data</strong>: input data for the SWMM model. As there are a lot of parameters, they are grouped according to their nature:<ul>
+<li>Climatology: in this group, data related to the weather are introduced that may influence the water flows before it reaches the network.</li>
+<li>Hydrology: referred to data related to water flow that enters naturally into network (runoff), such as rainfall, aquifers, infiltrations, or thaw. There are two layers with geometry:</li>
+</ul>
+</li>
+</ul>
+<p><em>Raingage:</em> represents rain gauges as point elements</p>
+<p><em>Subcatchment</em>: represents subcatchments as polygons</p>
+<ul>
+<li>
+<ul>
+<li>Hydraulics: in this group the different elements of the network that are necessary to carry out the model come into play. They are divided into nodes and arcs, each of these related to other tables without geometry that contain additional information.<ul>
+<li><em>Node</em>: elements such as <em>Junction, Outfall, Divider and Storage</em>. The additional tables refer to external contributions of flow that go directly to the network. There are three types:<ul>
+<li>Inflows – series of flow values that go directly into the nodes defined by the user. They are used in case of the absence of runoff data.</li>
+<li>Dwf (Dry weather inflows) – continuous flow inputs that reflect the contributions that sewage flow makes to the network. They can be considered as reference flows of conduits.</li>
+<li>RDII (Rainfall-Derived Infiltration/Inflow) – flows from rainwater that are introduced into the network due to direct contributions in the connections with the wells, collectors of pumps or in case of breaks in pipes or bad connections of the elements.</li>
+</ul>
+</li>
+<li>Arc: elements such as <em>Conduit and Virtual arc</em>. There are also tables referring to the cross sections, which describe how the bottom level of a duct varies, and to flow regulators, which are devices used to control and divert the flows within the system. The <em>orifices, weirs</em>, discharges <em>(outlets</em>) and pumps can perform the regulation function.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<ul>
+<li>Quality: this group of tables, without geometry, allows introducing data related to land use and pollutants present in the water. Land uses serve only to consider the phenomena of accumulation and carry-over of pollutants in the catchments.</li>
+<li>Curves &amp; Timeseries: the <strong>curves</strong> allow to establish the relationship between two quantities (in a similar way to a graph) so that this data is easily introduced into the network by assigning curves to the elements of the system. The <strong>time series</strong> serve to describe certain properties of some project objects that vary over time.</li>
+<li><strong>Input selected feature</strong>: this group is used, in case of having several sectors or hydrological catchments, to select with which of them the user wants to work. This is one of the tools that Giswater adds to the own uses of the SWMM program. If a specific area is selected to make the hydraulic model, this group of layers will show which are the node and arc elements that come into play: all those within the selected area.</li>
+<li><strong>Output result</strong>: the group of model results allows the user to view, both through elements symbolized on the map and through data tables, the results of the SWMM hydraulic model. As in EPANET, it is also possible to compare results with another model previously made.</li>
+</ul>
+</li>
+<li>Node flooding: refers to all the water that overflows a node, during the time it has been overflowing, the maximum flow during the flood, as well as the different volumes of water in m2. It is represented in QGIS like this:</li>
+</ul>
+<p><img alt="Figure 16" src="../images/figure16_legend.png" /></p>
+<ul>
+<li>Node surcharge: the overload occurs when the water rises above the crown of the highest conduit. It shows the data referred to hours of overload and maximum and minimum values.</li>
+<li>Node inflow: represents the total flow input, both laterally and through links. Shows the total, temporary and maximum values.</li>
+<li>Node depth: average and maximum depth of water. Maximum hydraulic height (HGL) and maximum depth time.</li>
+<li>Arc flow: this layer represents the percentages of water flow in the network conduits. They are symbolized in QGIS as follows:</li>
+</ul>
+<p><img alt="Figure 17" src="../images/figure17_legend2.png" /></p>
+<ul>
+<li>Conduit surcharge: in this layer the overload of conduits is represented. Only those with one or more non-zero entries can be displayed. A conduit will be considered overloaded when the slope of the HGL exceeds the slope of the conduit. Data about overload times will be shown in one or both nodes linked to the arc.</li>
+<li>Pumping summary: different data referred to the operation of the pumps, such as maximum and average flow pumped, consumed energy, percentages of operation times, etc.</li>
+<li>Flow class: classification of different categories of flows related to the arcs, for example, if they are dry in one of their nodes or if the level of flow is critical.</li>
+<li>Arc pollutant load: relationship between arcs and pollutants.</li>
+<li>Outfall flow/load: flows of outfall. Percentage of discharge time, maximum and average discharge flow, total discharge volume, etc.</li>
+<li>Subcatchment runoff: total values of precipitation, evaporation, infiltration, depth, and volume of the escape of the subcatchment. It is represented by a break coefficient.</li>
+</ul>
+<p><img alt="Figure 18" src="../images/figure18_legend3.png" /></p>
+<ul>
+<li>Storage volume: data reffered to the deposit. Maximum and average volume in the installation, percentage used, times of use and maximum outflow of the deposit.</li>
+<li>Subcatchment washoff: total mass of each pollutant that leaves the subcatchment.</li>
+<li>LID performance: They are the performances that have been obtained through the application of LID (Low Impact Development) techniques.</li>
+</ul>
+<p>The rest of the tables found in this group do not have geometry, but they also provide data related to results of the hydraulic model such as quality and quantity of infiltration, instability indexes, surface water values, among others.</p>
+<p>In the manual <strong>annex</strong>, you may find the <strong>complete tables</strong> of this section with a description for each field, as well as the used interpretation criteria.</p>
+<h3 id="424-masterplan">4.2.4 Masterplan</h3>
+<p>This4fourth group of tables and layers found in the QGIS ToC is used to perform budget calculations of the network. It is one of the main tools and with most potential of Giswater, since its use allows to realize in a very simple way different valorization of the water network and allows to systematize this process so that once all the necessary data is available the calculation is practically automatic. This means a considerable saving of time and work for the users responsible for carrying out such calculations.</p>
+<p>For both WS and UD projects, the group structure is the same, but the data has some differences, since the nature of the projects is different. As throughout the manual, when any of the explanations is exclusive for a type of project, its membership will be specified.</p>
+<p>There are two clearly differentiated parts within the Masterplan group:</p>
+<ul>
+<li><strong>Calculation of the equity value of the elements</strong>: in these layers the price is calculated for each element of every state (obsolete, on service or planned). All data is inserted into two views (v_plan_result_node and v_plan_result_arc) depending on the type of element.</li>
+<li><strong>Calculation of values of the planning sectors (psector)</strong>: prices are calculated only for the planned elements. Each group of elements planned for a network modification operation must be inserted into a planned sector or psector. The objective of this group is to know the price of carrying out a planned operation on the network.</li>
+</ul>
+<p>The first step is to assign <strong>prices</strong> to the elements of the network, to the materials, to the possible combinations of variables and, in short, of all the parameters that may have a cost to create the budget. In the same catalogs there are many of these values, which are transferred directly to the elements. The rest of the prices should be included in the two tables of the Prices group:</p>
+<ul>
+<li><strong>Prices</strong>: in this table are shown the simple prices for each parameter. Most of these are imported from the database and calculations of ITeC (Institute of Construction Technology). The unit field specifies the way to calculate the price (per unit, per cubic meter, etc.)</li>
+<li><strong>Compost price</strong>: shows variable prices, since the price of certain elements can not be calculated with a simple price, as it is made up of more than one part. Contains the id's from the previous table. The compost_id can be repeated since a compound element will be formed of more than one simple element (simple_id). The value column represents the percentage of simple element that makes up the composite element. By linking these fields, it will be possible to calculate the total prices.</li>
+</ul>
+<p><img alt="Figure 19" src="../images/figure19_note06.png" /></p>
+<p>To calculate the equity value, there is only one table inside the group of <em>input data:</em></p>
+<ul>
+<li>Arc_x_pavement: this table has, as its only objective, to establish the percentages of types of pavement that has only one arc. Obviously, an arc can have 100% of its length in the same pavement, but in opposite case, this table will be used to specify what percentages you have of each. As the pavements - which can be found in the pavement catalog (cat_pavement) - have different prices per square meter, knowing the percentages used in each arc of the network will finally make it possible to establish very precise patrimonial values.</li>
+</ul>
+<p><em>ATTENTION: When you insert a new arc, the records are automatically inserted in the plan_arc_x_pavement table, without pavement values and percentages, but in this way all the arcs will be prepared to have values.</em></p>
+<p>Once the price and pavement tables have all the necessary data, it is time to fill in the tables of results of the equity value. The importance of having complete data must be considered, some data are taken from different tables. Some come directly from the tables of the elements (arc, node) and must be correctly filled in for a right calculation. All columns are required, and all parameters are necessary.</p>
+<p>There are two tables with the results of the calculation of the equity value, one for arc elements and the other for node elements. Remember that here the value data will be displayed for elements in <strong>any state type</strong>, whether it is obsolete, on service or planned:</p>
+<ul>
+<li><strong>Plan result node</strong>: contains the data of the calculation of the equity value of each node and is represented in QGIS as a punctual element with different colors depending on the final value.</li>
+<li><strong>Plan result arc</strong>: contains the data of the calculation of the equity value of each arc and is represented in QGIS as a line element with different colors depending on the final value.</li>
+</ul>
+<h4 id="4241-planification-sectors-psectors">4.2.4.1 Planification sectors (psectors)</h4>
+<p>The 4sectors, planification sectors, are areas with planned actions that affect different elements represented in the QGIS map. Obviously, if they are planned elements, their state must be planned (2).</p>
+<p>The importance of this group of tables and layers is that it is usually difficult to calculate the value and price of operations of adding new elements to the network. Through these planning sectors it is possible to obtain the execution price of the entire work, as well as the detailed prices of each element.</p>
+<ul>
+<li><strong>Plan psector</strong> <em>(v_edit_plan_psector)</em>: geometrically represents the different existing planning sectors. It contains additional data, such as priority or some fields of percentages such as gexpenses (added contract costs) and vat (VAT cost).</li>
+</ul>
+<p>In the manual <strong>annex</strong>, you may find the <strong>complete tables</strong> of this section with a description for each field, as well as the used interpretation criteria.</p>
+<h4 id="4242-network-element-price-management">4.2.4.2 Network element price management</h4>
+<p>In m4sterplan, in addition to planning the network sectors, two types of prices that the network can have are also managed. These are the prices of reconstruction and rehabilitation.</p>
+<p>To be able to have a reconstruction price assigned, it is necessary to have filled the fields of the catalogs provided for it, so the first thing to do is to fill them in. The next image shows a pipeline with its respective measurements, specifying all the parameters that come into play when calculating prices.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="Figure 20" src="../images/figure20_duct.avif" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Representation of the section of a duct with its different measurement parameters</em></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>The fields that affect the calculation of the equity value are:
+From the arc catalog (cat_arc):</li>
+</ul>
+<p><strong>z1</strong> (m)</p>
+<p><strong>width</strong> (m) - Total width. Width + bulk*2</p>
+<p><strong>area</strong> (m2)</p>
+<p><strong>estimated_depth</strong> (m)</p>
+<p><strong>bulk</strong> (UD (m) WS (mm)) - thickness of the conduit’s wall</p>
+<p><strong>cost_unit</strong> - Measurement units</p>
+<p><strong>cos</strong>t - Price of the arc type. Related with price tables.</p>
+<p><strong>m2bottom_cost</strong> - Price of the type of soil. Related with price tables.</p>
+<p><strong>m3protec_cost</strong> - Price of protection. Related with price tables.</p>
+<ul>
+<li>From pavement catalog (cat_pavement)</li>
+</ul>
+<p><strong>thickness</strong> (m) - thickness of the pavement</p>
+<p><strong>m2_cost</strong> - Price of the square meter of the pavement. Related with price tables.</p>
+<ul>
+<li>From soil catalog (cat_soil)</li>
+</ul>
+<p><strong>y_param</strong> - Inclination of the slope of the trench</p>
+<p><strong>b</strong> (m) - Distance between the Conduit and the trench limit</p>
+<p><strong>trenchlining</strong> (%) - Percentage of intivation of the soil type</p>
+<p><strong>m3exc_cost</strong> - Excavation price. Related with price tables</p>
+<p><strong>m3fill_cost</strong> - Filling Price. Related with price tables</p>
+<p><strong>m3excess_cost</strong> - Excess transportation price. Related with price tables</p>
+<p><strong>m2trenchl_cost</strong> - Intivation price. Related with price tables</p>
+<ul>
+<li>From node catalog (cat_node):</li>
+</ul>
+<p><strong>estimated_y</strong></p>
+<p><strong>cost_unit</strong> - Measurement units</p>
+<p><strong>cost</strong> - Price of the node type. Related with price tables.</p>
+<p>Once the work is done, the only part left is to link the elements with its catalogs:</p>
+<p><strong>ARC</strong> with cat_arc (arc.arccat_id), cat_pavement (plan_arc_x_pavement) and cat_soil (arc.soilcat_id)</p>
+<p><strong>NODE</strong> with cat_node (node.nodecat_id)</p>
+<p>On the other hand, to assign a rehabilitation price, given the disparity of costs and cases, each operator must build its own rehabilitation algorithm, with which the option is ready, but is disabled as a series value.</p>
+<p>In the manual <strong>annex</strong>, you may find the <strong>complete tables</strong> of this section with a description for each field, as well as the used interpretation criteria.</p>
+<h3 id="425-admin">4.2.5 Admin</h3>
+<p>This group of layers basically manages the different catalogs with which Giswater works.</p>
+<p>Working with catalogs is one of the main features that Giswater has, and this is possible because we are in a database environment.</p>
+<p>In fact, before starting to work on our project, we must build at least the arc and node catalogs to be able to introduce a simple record in the arc and node layers.</p>
+<p>Its function is multiple. Among other characteristics, they allow us to catalog the information to standardize values, put economic value in each of the network elements or characterize the properties of the elements for use in the hydraulic model.</p>
+<p>It is interesting to know that there are four types of catalogs:</p>
+<ul>
+<li><strong>Topological elements</strong>: Since the network is based on arc-node topology, the catalogs on which these elements pivot will be the most important of our network (node catalog and arc catalog).</li>
+<li><strong>Other network elements</strong>: The elements that complement our network are connec or element which have their corresponding catalogs.</li>
+<li><strong>Management</strong>: As a complement to the network catalogs, there are other tables in the database that also act as catalogs, such as the catalogs of: floors, builders, construction files, owners, pavement.</li>
+<li><strong>Hydraulic model</strong>: Necessary for the construction of a quality hydraulic model. In this sense, we have the roughness catalog, which allows us to differentiate <em>roughness</em> depending on the age of the material.</li>
+</ul>
+<p><strong>List of Admin catalogs</strong> (the name of the table in the database in parentheses)</p>
+<p>Element material catalog (cat_mat_element)</p>
+<p>Element catalog (cat_element)</p>
+<p>Owner catalog (cat_owner)</p>
+<p>Soil catalog (cat_soil)</p>
+<p>Pavement catalog (cat_pavement)</p>
+<p>Work catalog (cat_work)</p>
+<p>Builder catalog (cat_builder)</p>
+<p>Brand catalog (cat_brand)</p>
+<p>Users catalog (cat_users)</p>
+<p><span style="color:#4682B4;">Period catalog (ext_cat_period)</span></p>
+<p><span style="color:#4682B4;">Hydrometer catalog (ext_cat_hydrometer)</span></p>
+<p><span style="color:#4682B4;">Brand model catalog</span> /<span style="color:#FFD700;">Model catalog</span> (cat_brand_model)</p>
+<p><span style="color:#FFD700;">Node shape catalog (cat_arc_shape)</span></p>
+<p><span style="color:#FFD700;">Arc shape catalog (cat_node_shape)</span></p>
+<blockquote>
+<p>ℹ️ <strong>Blue and Yellow colors just apply to WS and UD schemes, respectively.</strong></p>
+<p>ℹ️ <strong>Work catalog: it’s a catalog of work records, for the operational control of the system.</strong></p>
+</blockquote>
+<h3 id="426-basemap">4.2.6 Basemap</h3>
+<p>The last group of layers of the ToC of Giswater is the one with base maps, which is the cartography that can be used as reference for the rest of the elements and that represents some parts of the territory. The incorporation of these layers to the project is particularly important, since it adds information that most users is used to see and therefore, they find it easier to identify to work with it. The base cartography is composed of:</p>
+<p><img alt="Figure 21" src="../images/figure21_basemap.avif" /></p>
+<p>There are different foreign keys between the street tables that give consistency to the data and restrict possible errors. The ext_address table must have the field muni_id of the ext_municipality table and the field streetaxis_id of the ext_streetaxis table. At the same time, the ext_streetaxis table also must have the field muni_id. As there are different municipalities, only each streetaxis can be related to the municipality to which it belongs with this field.</p>
+<p>The origin of the data referring to base cartography has nothing to do with Giswater, but must come from other sources, hence the prefix ext in the layers, such as cadastral data services. These layers, despite their external origin, are completely integrated into the Giswater project and have more functionalities besides the simple cartographic representation of the elements, therefore they must have a specific structure, which can be seen in the annex of this manual. These functionalities will be reflected in section <strong>5.2</strong> but are basically of searching.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="Figure 22" src="../images/figure22_map.avif" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Example of the elements that make up the Basemap group in the Giswater ToC.</em></td>
+</tr>
+</tbody>
+</table>
+<p>In the same way, if a user wishes to, more external layers related to the base map of the area can be added into the group to visualize other elements or anything that one wants to represent. In this case, any layer that is added will be completely external to Giswater and will have no relationship with other tables. Examples of layers that can be added here are a topography raster of Catalonia or an orthophoto.</p>
+<p>In the manual <strong>annex</strong>, you may find the <strong>complete tables</strong> of this section with a description for each field, as well as the used interpretation criteria.
+Previous</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../../installation/Basic_work_rules/" class="btn btn-neutral float-left" title="3. Basic Work Rules"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../Giswater_plugin/" class="btn btn-neutral float-right" title="5. Giswater Plugin">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../../installation/Basic_work_rules/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../Giswater_plugin/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

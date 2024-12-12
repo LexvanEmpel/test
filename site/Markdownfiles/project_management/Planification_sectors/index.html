@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>8. Planification Sectors - Giswater Documentation</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "8. Planification Sectors";
+        var mkdocs_page_input_path = "Markdownfiles\\project_management\\Planification_sectors.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../..">
+          <img src="../../../assets/giswater.png" class="logo" alt="Logo"/>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Introduction</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../introduction/Introduction/">1. Overview</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Installation and Setup</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../installation/Necessary_software/">2. Necessary Software</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../installation/Basic_work_rules/">3. Basic Work Rules</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Working with Giswater</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../getting_started/Working_environment_QGIS/">4. QGIS Environment</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../getting_started/Giswater_plugin/">5. Giswater Plugin</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../getting_started/Digitalize_network/">6. How to Digitalize the Network</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Tools and Advanced Features</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tools/Toolbox_adjustments/">7. Toolbox Adjustments</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Managing Projects</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">8. Planification Sectors</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#81-manage-relationships-between-network-elements-and-psectors">8.1 Manage relationships between network elements and psectors</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#arc">Arc</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#node">Node</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#connec-gully-and-links">Connec, Gully and Links</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#tool-to-change-state-and-doable">Tool to change state and doable</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#advanced-use-of-links-in-planified-state">Advanced use of links in planified state</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#82-executing-a-psector">8.2 Executing a psector</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Hydraulic_model/">9. Hydraulic Model (Export/Import)</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Data Integration</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../data_integration/Commercial_data/">10. Commercial Data</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Additional Information</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../additional/Other_considerations/">11. Other Considerations</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../additional/annex/">Annex</a>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../visualization_proposals/visualisations/">visualization proposals</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">Giswater Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Managing Projects</li>
+      <li class="breadcrumb-item active">8. Planification Sectors</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="8-planification-sectors">8. Planification sectors</h1>
+<p>This chapter tries to answer some of the more advanced or complex questions about the use of planning sectors (hereinafter psectors or alternatives).</p>
+<div class="admonition warning">
+<p class="admonition-title">Before reading this section, it is important to have the knowledge that is transmitted in the sections <a href="/Markdownfiles/getting_started/Working_environment_QGIS/#4241-planification-sectors-psectors">#4.2.4.1 Planning sectors (psectors)</a>and <a href="/Markdownfiles/tools/Giswater_plugin/">#5.2.5 Masterplan</a>, where the operation of the psectors is introduced.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">It is also important to know the topological rules of the planified elements, explained in the section <a href="/Markdownfiles/installation/Basic_work_rules/#37-topology-rules">#3.7 Topological rules</a>, especially the topology of states and the behavior of the links in planning.</p>
+</div>
+<p>It is important to highlight some features, describe processes that have not yet been mentioned or exemplify use cases.</p>
+<h2 id="81-manage-relationships-between-network-elements-and-psectors">8.1 Manage relationships between network elements and psectors</h2>
+<p>The complexity of the psector begins in the Relations tab, where the elements that will be part of this alternative are established, either to introduce a new network layout or to remove part of it.</p>
+<p>Features for each type of element:</p>
+<h3 id="arc">Arc</h3>
+<p>Related arcs can be entered in the following ways:</p>
+<ul>
+<li>
+<p><strong>Add a new section in the Planned state</strong> using the usual drawing tools. It will be able to use nodes in service or planified to connect. <em>State=1, Doable=True</em> (<span style="color: blue;">blue</span> color in Image 101).</p>
+</li>
+<li>
+<p>Select an existing section using the <strong>Select elements</strong> button (1st icon in <span style="color: green;">green</span> in Image 101) within the Relations tab (Arc subtab). This will disappear from the map when the alternative is active. <em>State=0, Doable=False</em> (<span style="color: orange;">orange</span> color in Image 101).</p>
+</li>
+<li>
+<p>Use the button to <strong>Replace arc in service with planned</strong> (3rd icon in <span style="color: green;">green</span> in Image 101) when the only thing we want is to change the catalog (material and diameter) of an existing arc but keep exactly the same layout. Two records will enter the Relationships tab: <em>State=1, Doable=True</em> (for the new one) and <em>State=0, Doable=False</em> (for the old one).</p>
+</li>
+<li>
+<p><strong>Split an In-Service arc with a Planned node</strong>. This triggers an automatic process where two new sections are generated and the one that was in service is 'unsubscribed'. We will call the new sections 'fictitious' or 'to maintain', since they maintain the previous catalog and layout and are only necessary to maintain the topology. <em>State=1, Doable=False</em> (for the new ones) and <em>State=0, Doable=False</em> (for the old one) (<span style="color: red;">red</span> color in Image 101).</p>
+</li>
+<li>
+<p><strong>Put a Planified node on top of an In Service node</strong>. It also triggers an automatic process and 'fictious' sections are generated for all those that intersect with this substituted node. The sections that were in service are 'withdrawn'. It is used to maintain the topology. <em>State=1, Doable=False</em> (for the new ones) and <em>State=0, Doable=False</em> (for the old ones) (<span style="color: purple;">purple</span> color in Image 101).</p>
+</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">The sections that <strong>appear in the Relations tab from an automatic process</strong> can be easily identified through the addparam column, which informs if it is an arc division ('parents' or 'children') or replacement process node ('generated' or 'decommissioned').</p>
+</div>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="figure 1" src="../images/figure1_relations.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Image 101: Various examples of records in the Arc tab of a psector's relations.</em></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Ficticius arcs</strong></p>
+<p>These are generated automatically through the explained processes of section division or node replacement. These can be identified since it is established a <strong><em>state_type</em></strong> different than usual for planified elements. In the Giswater sample schema this is FICTICIUS, but these can be configured and change its name or add a new one by:</p>
+<ol>
+<li>
+<p>Modify the <strong><em>value_state_type</em></strong> table, changing names or adding records with state=2.</p>
+</li>
+<li>
+<p>In the <strong><em>config_param_system table</em></strong>, modify the value of the variable <strong><em>plan_statetype_vdefault</em></strong> in the key <em>plan_statetype_ficticius</em>.</p>
+</li>
+</ol>
+<p>Although they are generated automatically, once generated they can be modified again to adapt their use to what we really want to do in the psector. Examples:</p>
+<ul>
+<li>
+<p>If we want to make a <strong>substitution of only a part of the section</strong>, we must cut it with a node at the point where we want to end the substitution. Of the two fictitious sections generated, we can change the catalog and the state_type for one of them so that it is identified that it is no longer fictitious (so it can be symbolized in a different way). If we want it to enter the budget of the psector, we must change the <em>doable</em> field to True.</p>
+</li>
+<li>
+<p>If we want to <strong>cut an existing section by the half and remove the other part</strong>, we will have to do the same as before but this time we will simply delete one of these fictious sections. We can remove it with the plugin tool or with the one of QGIS.</p>
+</li>
+</ul>
+<h3 id="node">Node</h3>
+<p>Related nodes can be introduced in the following ways:</p>
+<ul>
+<li>
+<p><strong>Add a new node in Planned state</strong> using the usual drawing tools. This can only act as the initial or final node for sections in a planned state. State=1, Doable=True (<span style="color: blue;">blue</span> color in Image 102).</p>
+</li>
+<li>
+<p>Select an existing node using the <strong>Select Elements</strong> button (1st icon in <span style="color: green;">green</span> in Image 101) within the Relations tab (Node subtab). This will disappear from the map when the alternative is active. State=0, Doable=False (<span style="color: red;">red</span> color in Image 102).</p>
+</li>
+<li>
+<p>Use the <strong>Merge with planned sections</strong> button (4th icon in <span style="color: green;">green</span> in Image 102) when we want to make a node in service disappear and join the two sections that connect to it into one. Enter a record in the Relations tab: State=0, Doable=False (<span style="color: orange;">orange</span> color in Image 102) and 3 records also appear in the Arc tab: State=1, Doable=True (for the new one) and State=0, Doable=False (for the old).</p>
+</li>
+</ul>
+<p>As seen in section <a href="/markdownfiles/project_management/Planification_sectors/#arc">#Arc</a>, when locating Planned nodes on sections, various processes of section division will take place with the commented results.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="figure 2" src="../images/figure2_records.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Image 102: Several examples of records in the Node tab of the relations of a psector.</em></td>
+</tr>
+</tbody>
+</table>
+<h3 id="connec-gully-and-links">Connec, Gully and Links</h3>
+<p>Related connecs or gullys (hereafter connections) can be introduced in various ways. In this case, special emphasis must also be placed on the management that can be done of the <strong>links</strong> that unite the connections with the network. It can be managed in the following ways:</p>
+<ul>
+<li>
+<p><strong>Add a new connection in Plannified state</strong> using the usual drawing tools. <em>State=1, Doable=True</em> (<span style="color: blue;">blue</span> color in Image 103). It can be connected to the network through a link in the ways described in the section <a href="/markdownfiles/installation/Basic_work_rules/#373-link-behavior">#3.7.3 Link behavior</a>.</p>
+</li>
+<li>
+<p>Select an existing connection using the <strong>Select elements</strong> button (1st icon in <span style="color: green;">green</span> in Image 103) within the Relations tab. In this case, it will initially enter the relationships as <em>State=1, Doable=False</em> (<span style="color: red;">red</span> color in Image 103). Next, the link can be modified by changing the <strong>arc_id</strong> (5th icon in <span style="color: green;">green</span> in Image 103). If you want to remove it from this alternative, you must change <em>State=0</em> (<span style="color: orange;">orange</span> color in Image 103).</p>
+</li>
+<li>
+<p>With the substitution of any section that has connections using the methods described in sections <a href="/markdownfiles/project_management/Planification_sectors/#arc">#Arc</a> and <a href="/markdownfiles/project_management/Planification_sectors/#node">#node</a>. All the affected connections will enter relations with <em>State=1, Doable=False</em>. It can be modified later if you want to unsubscribe or change the link.</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="figure 3" src="../images/figure3_connect.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Image 103: Various examples of records in the Connect tab of a psector's relations.</em></td>
+</tr>
+</tbody>
+</table>
+<h3 id="tool-to-change-state-and-doable">Tool to change state and doable</h3>
+<p>As mentioned in the previous sections, the most important fields in the relationship tables with psector are <strong><em>State</em></strong> and <strong><em>Doable</em></strong>. These can be modified depending on the needs of the user. For example, in the case of connections, it may be common to have to go from State=1 to State=0 when you want to drop an existing connection.</p>
+<p>In the Relations tab of the form there is a specific button (Image 104) to be able to make changes in these columns in an easy and multiple way. </p>
+<p>On the elements selected in the table, you can click the button and choose if you want to change the state or the doable. In either case, what the program will do is change the value from 1 to 0 or vice versa and from true to false or vice versa.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="figure 4" src="../images/figure4_image.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Image 104: Button to change the State or Doable of the elements in psector.</em></td>
+</tr>
+</tbody>
+</table>
+<h3 id="advanced-use-of-links-in-planified-state">Advanced use of links in planified state</h3>
+<p>There are several ways to manage connections and their links when they are in a planified state.</p>
+<p><strong>For each connection with State=1 in the psector, a new link will be created in the database.</strong> There are two possible scenarios:</p>
+<ul>
+<li>Connection in <strong>Plannified</strong> state - It will have 1 link in Plannified state.</li>
+<li>Connection in <strong>In Service state</strong> - It will have 2 links, 1 in In Service state (which will be displayed without the psector), 1 in the Planified state (which will be displayed with the psector).</li>
+</ul>
+<p>This second case serves to change the way of connection using the psector. To do it you have to:</p>
+<ol>
+<li>Add the desired connections to the psector <strong>Relations</strong> using the methods explained in <a href="/markdownfiles/project_management/Planification_sectors/#connec-gully-and-links">#Connec, Gully and Links</a></li>
+<li>
+<p>Change the <strong>geometry</strong> of the link or its <strong>arc_id</strong>. It can be done in several ways:</p>
+<p>a. <strong>Manually edit the link</strong> with the usual QGIS tools. In case the connection point is in a different section, the arc_id will be changed automatically.</p>
+<p>b. Use the <strong>Set arc_id</strong> tool from the connections tab of the psector. On the selected rows you can establish which section you want to connect to. The connection point can be established as the closest place of the selected section (<em>Set closest point</em>) or the exact place where the section has been clicked (<em>Set user click</em>).</p>
+</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="figure 5" src="../images/figure5_button.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Image 105: Button to establish a new arc_id in the connections in psector.</em></td>
+</tr>
+</tbody>
+</table>
+<h2 id="82-executing-a-psector">8.2 Executing a psector</h2>
+<p>One of the fields to take into account of the psector is its <strong>Status</strong>, since depending on the value that is established, <strong>certain changes can be executed automatically</strong>.</p>
+<p>When executing or canceling psectors, its <strong>related features will be moved to traceability tables</strong> where consulting data will be clear and easy. Psector manager will still keep the alphanumerical basic data and the poligonal geometry around the existing features, but there will be no relations with inventory features.</p>
+<p>Traceability tables are:</p>
+<ul>
+<li>audit_psector_arc_traceability</li>
+<li>audit_psector_node_traceability</li>
+<li>audit_psector_connec_traceability</li>
+<li>audit_psector_gully_traceability</li>
+</ul>
+<p>These tables will contain all the information stored on plan_psector_x_* tables plus the executed action (EXECUTE or CANCEL) plus all the information on inventroy table (arc, node, connec, gully).</p>
+<p>There are 5 different psector states, with its related actions:</p>
+<ul>
+<li><strong>PLANNED</strong> - No action</li>
+<li><strong>ON GOING</strong> - No action</li>
+<li><strong>EXECUTED (Save Trace)</strong> - Related features will be inserted to traceability tables with Execute psector action.</li>
+<li><strong>EXECUTED (Set OPERATIVE and Save Trace)</strong> - The elements that <strong>were planified</strong> will become <strong>OPERATIVE state</strong>. The elements that <strong>were planned to be removed</strong> from the psector will become <strong>OBSOLETE state</strong>. In order to also mantain traceability, related features will be inserted to traceability tables with Execute psector action.</li>
+<li><strong>CANCELED (Save Trace)</strong> - Realted features will be inserted to traceability tables with Cancel psector action.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="figure 6" src="../images/figure6_states.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Image 106: Form of a psector where the available states are shown.</em></td>
+</tr>
+</tbody>
+</table>
+<p>Traceability tables are <strong>ready to load</strong> onto QGIS project using Giswater's Load Layers button. By default, a useful symbology will be setted to establish a <strong>visual difference between planified features, obsolete features and affected features</strong>. Of course this simbology can be modified by user to set a more accurate style according to the needs.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="figure 7" src="../images/figure7_psector.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Image 106: Form of a psector where the available states are shown.</em></td>
+</tr>
+</tbody>
+</table>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../../tools/Toolbox_adjustments/" class="btn btn-neutral float-left" title="7. Toolbox Adjustments"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../Hydraulic_model/" class="btn btn-neutral float-right" title="9. Hydraulic Model (Export/Import)">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../../tools/Toolbox_adjustments/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../Hydraulic_model/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

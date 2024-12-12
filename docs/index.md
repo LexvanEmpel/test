@@ -1,3 +1,17 @@
+
+<script>
+    var style = document.createElement('style');
+    style.innerHTML = `
+        .wy-nav-content {
+            width: 100% !important;
+            max-width: 100% !important;
+            margin: 0 auto !important;
+        }
+    `;
+    document.head.appendChild(style);
+</script>
+
+
 # Giswater Custom Documentation
 
 Welcome to the **Giswater Custom Documentation**, an optimized and tailored guide for your organization's use of Giswater. Fast, dynamic, and built to adapt to your needs, this documentation is structured to give you the best experience while navigating your Giswater functions.

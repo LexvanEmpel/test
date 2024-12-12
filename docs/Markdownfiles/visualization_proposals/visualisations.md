@@ -1,3 +1,15 @@
+<script>
+    var style = document.createElement('style');
+    style.innerHTML = `
+        .wy-nav-content {
+            width: 100% !important;
+            max-width: 100% !important;
+            margin: 0 auto !important;
+        }
+    `;
+    document.head.appendChild(style);
+</script>
+
 # Visualisation proposals
 
 In this section are the different visualisation whom you can use in markdownfiles.

@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>9. Hydraulic Model (Export/Import) - Giswater Documentation</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "9. Hydraulic Model (Export/Import)";
+        var mkdocs_page_input_path = "Markdownfiles\\project_management\\Hydraulic_model.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../..">
+          <img src="../../../assets/giswater.png" class="logo" alt="Logo"/>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Introduction</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../introduction/Introduction/">1. Overview</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Installation and Setup</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../installation/Necessary_software/">2. Necessary Software</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../installation/Basic_work_rules/">3. Basic Work Rules</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Working with Giswater</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../getting_started/Working_environment_QGIS/">4. QGIS Environment</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../getting_started/Giswater_plugin/">5. Giswater Plugin</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../getting_started/Digitalize_network/">6. How to Digitalize the Network</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Tools and Advanced Features</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tools/Toolbox_adjustments/">7. Toolbox Adjustments</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Managing Projects</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../Planification_sectors/">8. Planification Sectors</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">9. Hydraulic Model (Export/Import)</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#91-process-characteristics">9.1 Process characteristics</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#911-main-characteristics-for-water-supply-networks-ws">9.1.1 Main characteristics for water supply networks (WS)</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#9111-working-by-sectors">9.1.1.1 Working by sectors</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#9112-demand-scenarios">9.1.1.2 Demand scenarios</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#9113-transformation-of-nodes-into-arcs">9.1.1.3 Transformation of nodes into arcs</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#9114-possibility-of-multipump">9.1.1.4 Possibility of multipump</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#9115-different-simulation-options">9.1.1.5 Different simulation options</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#912-main-characteristics-for-urban-drainage-networks-ud">9.1.2 Main characteristics for urban drainage networks (UD)</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#9121-working-by-sectors">9.1.2.1 Working by sectors</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#9122-management-of-hydrology-scenarios">9.1.2.2 Management of hydrology scenarios</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#9123-integration-of-the-standard-form-catalog-of-swmm">9.1.2.3 Integration of the standard form catalog of SWMM</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#9124-flow-regulators">9.1.2.4 Flow regulators</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#92-export-methods">9.2 Export methods</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#921-gullys-layer-management">9.2.1 Gullys layer management</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Data Integration</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../data_integration/Commercial_data/">10. Commercial Data</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Additional Information</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../additional/Other_considerations/">11. Other Considerations</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../additional/annex/">Annex</a>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../visualization_proposals/visualisations/">visualization proposals</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">Giswater Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Managing Projects</li>
+      <li class="breadcrumb-item active">9. Hydraulic Model (Export/Import)</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="9-export-import-of-the-hydraulic-model">9. Export - Import of the hydraulic model</h1>
+<h2 id="91-process-characteristics">9.1 Process characteristics</h2>
+<p>The export-import process to a hydraulic model has changed compared to previous versions of Giswater, since now the plugin integrates all the functionality. Let us look at some added improvements:</p>
+<ol>
+<li>
+<p>The elements can be sent to a model according to their status (STATE) that can be on service, obsolete or plannified, with the only condition that they have hydraulic coherence. For example, if in a sector I only have one tank in service state, and I send only the planned elements to a hydraulic model, this will not be possible.</p>
+</li>
+<li>
+<p>In case of WS projects it is possible to configure the roughness according to the age of the pipe. To do so, use the inp_cat_roughness table and assign the age to the element. If the construction date is not assigned to the element, it will be considered new for the purpose of capturing the roughness value.</p>
+</li>
+<li>
+<p>Some new elements appear which we have named nodarcs. The nodarcs are those elements that in inventory management are flow regulating nodes, such as valves or pumps, but that in the hydraulic model must be arcs, since a flow regulator in a conceptual way is always an element 'arc' that regulates flow between two different nodes.</p>
+</li>
+</ol>
+<p>The basic concepts that govern the export of the network to the hydraulic model, as well as the export peculiarities of each of the elements of the network, and the range of options allowed by the tool, are described at GitWiki:</p>
+<div class="admonition note">
+<p class="admonition-title"><a href="https://github.com/Giswater/giswater_dbmodel/wiki/epa_basics">epa_basics · Giswater/giswater_dbmodel Wiki</a></p>
+</div>
+<h3 id="911-main-characteristics-for-water-supply-networks-ws">9.1.1 Main characteristics for water supply networks (WS)</h3>
+<p>To perform the hydraulic model, it’s necessary to have complete and accurate data for each of the elements and parameters that you want to model, therefore, to understand everything required in each of the hydraulic model tables, we will have the EPANET manual, which specifies in a very exact and detailed way all those necessary concepts.</p>
+<h4 id="9111-working-by-sectors">9.1.1.1 Working by sectors</h4>
+<p>The work by sectors allows the user to filter and send to the hydraulic model only those elements that belong to a specific sector or send several sectors at the same time. As specified in section <em>4.2.1.2</em> of this manual, the field 'sector_id' stores the data of the hydraulic sector to which the element belongs, and subsequently through the table ‘selector_sector’ filters those elements that belong to the selected sectors.</p>
+<p>It should be noted that the sectors selected for export to the hydraulic model must have hydraulic coherence, i.e., for WS there must be a water reserve, which supplies the system (RESERVOIR, TANK) and at least one point of consumption.</p>
+<p>To select sectors to send to the hydraulic model, we use the basic 'Selector' tool.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="figure 8" src="../images/figure8_EPA.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>From the Go 2 EPA tool form you can manage the different options</em></td>
+</tr>
+</tbody>
+</table>
+<h4 id="9112-demand-scenarios">9.1.1.2 Demand scenarios</h4>
+<p>In the case of WS networks, the demand scenarios appear. The demand scenarios allow the user to define different demand hypotheses on consumer items (JUNCTION).</p>
+<p>In a normal case, the relation between point of consumption and value of demand is 1:1 and the main value of demand 'demand', together with consumption pattern <em>'pattern_id'</em> are defined in table <em>'inp_junction'</em>, as shown in the following image.</p>
+<p><img alt="figure 9" src="../images/figure9_INP.avif" /></p>
+<p>Through the <em>'inp_demand'</em> table, the user can apply an alternative demand to the main demand of the consumption node and in turn change the demand pattern. To do this, first the new scenario is created in the catalog table <em>‘cat_dscenario’</em> and then the node element is linked with the new demand and the scenario to which it belongs, as shown below.</p>
+<p><img alt="figure 10" src="../images/figure10_ID.png" /></p>
+<h4 id="9113-transformation-of-nodes-into-arcs">9.1.1.3 Transformation of nodes into arcs</h4>
+<p>Giswater solves this duality using the elements called <em>'nodarc'</em>, elements that by their characteristics in the inventory are nodes, but due to their behavior of flow regulator in the hydraulic model must be arcs. This <em>'nodarc'</em> element is defined by the user’s demand in the system table (<em>node_type</em>).</p>
+<p>All those elements that are labeled as SHORTPIPE / VALVE / PUMP, are <em>'nodarc'</em> type elements, and therefore their model information is stored in the tables:</p>
+<ul>
+<li>inp_shortpipe</li>
+<li>inp_valve</li>
+<li>inp_pump</li>
+</ul>
+<p>For a 'nodarc' element to be valid, it must comply with the rule of having 1 or 2 extreme arcs, otherwise the node will not be valid and will not become an arc.</p>
+<p>The transformation process from NODE to ARC is the following:</p>
+<ul>
+<li>A new ARC type geometry of 0.5 meters length or less is generated (suffix _n2a).</li>
+<li>Two new JUNCTION nodes are generated (suffixes n2a1 'initial node' and n2a2 'final node').</li>
+<li>The arc geometries of the existing arcs are 'clipped' and reconnected to the new nodes to accommodate the new arc.</li>
+<li>The attributes of the JUNCTION elements are inherited from the parent node.</li>
+<li>The attributes of the ARC elements are inherited from one of the two extreme arcs (material, diameter, etc.).</li>
+</ul>
+<h4 id="9114-possibility-of-multipump">9.1.1.4 Possibility of multipump</h4>
+<p>When representing a pumping within Giswater, it is possible that the relationship between the element and its behavior in the hydraulic model is not 1:1, i.e., (a pumping element is equivalent to a pump-type flow regulator), but rather contains more than one pump and therefore a 1:n relationship is generated with the element, (a pumping-type cadastre element is equivalent to several flow regulators).</p>
+<p>Every flow regulator labeled as PUMP stores its information in the 'inp_pump' table, which must be completed with the parameters that regulate the operation of said pump, thus, by default the relationship that is generated between the node and the number of pumps is 1:1.</p>
+<p>Through the <em>‘inp_pump_additional’</em> table, Giswater allows the user to manage more than one pump for a single pump-type element. This table must indicate the id of the parent node, the number of the pump defined in that node with respect to the total number of additional pumps and the working parameters of each of the additional pumps, as shown in the following example:</p>
+<p><img alt="figure 11" src="../images/figure11_ID.avif" /></p>
+<p>The example shows two additional pumps of the node '1105', i.e., this node, when exported to the hydraulic model, will be transformed into three pump-type arcs each with their own working parameters.</p>
+<h4 id="9115-different-simulation-options">9.1.1.5 Different simulation options</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="figure 12" src="../images/figure12_options.avif" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>All possible export options</em></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="figure 13" src="../images/figure13_options.avif" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>How the most important options are combined: NETWORK GEOMETRY GENERATOR, DEMAND TYPE &amp; PATTERN METHOD</em></td>
+</tr>
+</tbody>
+</table>
+<p>The relationship established between them is complex and is detailed in this table:</p>
+<p><a href="https://github.com/Giswater/docs/blob/master/github/pdf/go2epa_methods.pdf">go2epa_methods.pdf</a></p>
+<p>On the other hand, regarding the management of the status of the valves of a supply network is usually somewhat dynamic, depending on the user's needs, the status of the valves may be one or the other to perform the hydraulic simulation of the model. This modification of the status of the valves is due either to changes made in the inventory (broken valve, valve out of service, etc.) or to specific changes in their status when generating a cutting polygon.</p>
+<p>Thus, it can be said that the valves may have different status depending on the table in which the data is stored: <em>'inp_shortpipe'</em>, <em>'man_valve'</em> or <em>'anl_result_mincut_valve'</em>.</p>
+<p>Through the "Options" button within the export form to the hydraulic model, the user will be able to choose the status of the valves to be used in said simulation.</p>
+<ul>
+<li><strong>EPA TABLE</strong>: Those whose status is ‘In service’ or ‘Planned’ in the ‘inp_shortpipe’ layer.</li>
+<li><strong>INVENTORY VALUES</strong>: Those whose status is ‘In service’ or ‘Planned’ in the ‘man_valve’ layer.</li>
+<li><strong>MINCUT RESULT</strong>: Those valves that, depending on the results generated by the cutting polygon, have been affected. In turn, the user will be able to choose through the "Mincut result id" drop-down, the results of the cutting polygon that he wishes to model.</li>
+</ul>
+<h3 id="912-main-characteristics-for-urban-drainage-networks-ud">9.1.2 Main characteristics for urban drainage networks (UD)</h3>
+<p>To perform the hydraulic model, it is necessary to have complete and accurate data for each of the elements and parameters we wish to model; therefore, to understand everything required in each of the hydraulic model tables, the SWMM manual is available, which specifies in a very exact and detailed way all those necessary concepts.</p>
+<h4 id="9121-working-by-sectors">9.1.2.1 Working by sectors</h4>
+<p>The work by sectors allows the user to filter and send to the hydraulic model only those elements that belong to a specific sector or send several sectors at the same time. As specified in section <strong>4.2.1.2</strong> of this manual, the field <em>'sector_id'</em> stores the data of the hydraulic sector to which the element belongs, and subsequently through the table <em>'selector_sector'</em> it filters those elements belonging to the selected sectors.</p>
+<p>It should be noted that the sector or sectors selected for export to the hydraulic model must have hydraulic coherence, i.e., for UD networks the minimum requirements would be an entry point of water into the system, either rain, through the application of a rain in the SUBCATCHMENTS or, through wastewater (DWF), and an exit point of the system (OUTFALL).</p>
+<h4 id="9122-management-of-hydrology-scenarios">9.1.2.2 Management of hydrology scenarios</h4>
+<p>In case of UD networks, exists the hydrology scenarios. The hydrology scenarios allow the user to define different hypotheses about the method of infiltration, surface runoff, groundwater, de-icing, etc. applied to the drainage sub-basins (SUBCATCHMENTS).</p>
+<p>Using the catalog <em>'cat_hydrology'</em> it is possible to define a catalog element referring to the data of water flows that enter naturally into the system, indicating the identifier, a name, and the used infiltration method.</p>
+<p>The infiltration methods recognizable by SWMM are: <em>curve number</em>, <em>Green-Ampt</em> or <em>Horton equation</em>.</p>
+<p>Once the hydrology catalog has been defined, in the <em>inp_subcatchment</em> table each drainage sub-basin is related to the hydrology catalog to which it belongs, through the <em>hydrology_id</em> field.</p>
+<p><img alt="figure 14" src="../images/figure14_conduct.avif" /></p>
+<p>This relationship allows us to apply different calculation hypotheses on the same drainage sub-basin, and with the hydrology selector select those that we wish to use for the simulation.</p>
+<p>It is important to note that the fields filled in that refer to the infiltration method in the inp_subcatchment table must be recognizable by the hydrology catalog that is assigned to them.</p>
+<h4 id="9123-integration-of-the-standard-form-catalog-of-swmm">9.1.2.3 Integration of the standard form catalog of SWMM</h4>
+<p>Giswater integrates into its system the different varieties of geometric sections that SWMM supports to catalog the ducts of a UD network. Through the arcs catalog table, the different types of ducts are defined, filling in the following mandatory fields: <em>id, matcat_id, shape and the geom</em> fields necessary to define the shape.</p>
+<p>To know what data to put in these fields, you should consult the SWMM section catalog and know how this catalog and the domain table of normalized section values ​​(cat_arc_shape) work in an integrated way.</p>
+<p>In this sense, the cat_arc_shape table is composed of the following fields:</p>
+<ul>
+<li><strong>Id</strong>: name of the shape (in selected language) of our catalog (is the one that acts as domain values of the cat_arc_shape field).</li>
+<li><strong>Epa</strong>: name that receives the shape in SWMM (see section catalog of SWMM).</li>
+<li><strong>tsect_id</strong>: in case of open irregular shapes, label of the set of values in the inp_transects table that define the irregular geometry according to the HEC format.</li>
+<li><strong>curve_id</strong>: in case of shapes not included in the catalog of the attached document, the name of the curve defined in the inp_curve table defines the pairs of values that make up the detail of the shape of this section.</li>
+<li><strong>image</strong>: system field with the name of the png file that is stored in the Giswater plugin folder (plugins/giswater/png) and that is called when an info is done on an arc type element and the cost tab is clicked.</li>
+<li><strong>descript</strong>: auxiliary field of the description of the section.</li>
+<li><strong>active</strong>: boolean field that allows to control if the form is active in our catalog or has been unsubscribed and is not selectable.</li>
+</ul>
+<p>Considering the previous information and consulting the SWMM section catalog, the geom* fields can be filled in depending on the chosen shape.</p>
+<p>Here are two examples of the relationship between the <em>cat_arc_shape</em> table and the cat_arc arc catalog.</p>
+<p>If you wanted to catalog circular ducts, for example, as ' Redondo ' this translates to:</p>
+<p><strong>For the cat_arc_shape table</strong>,</p>
+<p>cat_arc_shape.id = 'Redondo'</p>
+<p>cat_arc_shape.epa = 'CIRCULAR'    </p>
+<p>cat_arc_shape.image = 'ud_section_circular.png'</p>
+<p>And in the cat_arc table,</p>
+<p>cat_arc.shape = 'Redondo'</p>
+<p>cat_arc.geom1 = The value expressed in meters of internal diameter of the element</p>
+<p>If I wanted to catalog my closed rectangular ducts, for example, as 'Rectangular' this translates to:</p>
+<p><strong>For the cat_arc_shape table</strong>,</p>
+<p>cat_arc_shape.id = 'Rectangular'</p>
+<p>cat_arc_shape.epa = 'RECT_CLOSED'    </p>
+<p>cat_arc_shape.image = 'ud_section_rect_closed.png'</p>
+<p><strong>And in the cat_arc table</strong>,</p>
+<p>cat_arc.shape = 'Rectangular'</p>
+<p>cat_arc.geom1 = The value expressed in meters of the interior vertical dimension of the element</p>
+<p>cat_arc.geom2 = The value expressed in meters of the interior horizontal dimension of the element</p>
+<p>In reality, the table cat_arc_shape is already filled in with all the standardized forms of SWMM, so expanding this catalog according to our needs is quite easy to understand and proceed.</p>
+<p>THREE BASIC RULES are always fulfilled:</p>
+<p>1) The value of cat_arc_shape.id can be customized by the user, but the value of cat_arc_shape.epa <strong>must always be normalized</strong> to one of the values of the SWMM section catalog.</p>
+<p>2) All the measurements (cat_arc.geom<em>) </em><em>are interior</em><em> and should be expressed in </em><em>meters</em>*.</p>
+<p>3) The values of cat_arc.geom1 always correspond to the vertical dimension of the element, as well as the values of cat_arc.geom2 always correspond to the horizontal dimension of the element.</p>
+<p>For the other cases, consult the SWMM section catalog.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="figure 15" src="../images/figure15_SWMM.avif" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Table with the different SWMM sections that Giswater incorporates as a method to inventory the shape of the ducts.</em></td>
+</tr>
+</tbody>
+</table>
+<h4 id="9124-flow-regulators">9.1.2.4 Flow regulators</h4>
+<p>For the management of the different flow regulators, the version 3.0 of Giswater maintains the same logic as the previous versions where the virtual arcs can be assigned to an EPA element.</p>
+<p>In this sense, there are two types of virtual arcs, those that enter the node (which would be the extension of the driving that precedes it) and those that leave the node (which would be the flow regulator).</p>
+<p>In the first case, the <strong>virtual</strong> arc is simply a flow propagator, which apart from the characteristics of the element, must indicate the direction it drains (the node 2). Therefore, when carrying out the export to the hydraulic model, what Giswater does is joining this virtual arc with its predecessor, converting the two into one.</p>
+<p>At the same time, if the <em>add_length</em> field we have it as <em>true</em>, the length of the virtual arc will be added at the time of merging, but if we have it in <em>false</em>, the length of that element will not be added.</p>
+<p>In a practical case, the virtual arcs which are flow propagators, would be applied to nodes of big dimensions like deposits or cameras, whose arcs arrive to them but do not connect with the center but remain at its perimeter, and the connection section between these two points would be a <strong>virtual_arc</strong>.</p>
+<p>In the second case, the <strong>virtual</strong> arc behaves as a flow regulator. The flow regulators are structures or devices used to control and derive the flows within the transportation system. The flow control elements that SWMM can model are the ones listed below, and its information is stored in the following tables:</p>
+<ul>
+<li>Orifice, table: inp_flwreg_orifice</li>
+<li>Weirs, table: inp_flwreg_weir</li>
+<li>Outlets, table: inp_flwreg_outlet</li>
+<li>Pump, table: inp_flwreg_pump</li>
+</ul>
+<p>In the tables named above, when introducing a new flow regulator, the following parameters must be defined: source node, destination arc, regulation ordinal (in case we want to introduce more than one regulator between that node and that arc with that type of regulation), and finally the different parameters that control said regulator.</p>
+<p>In the case if there is a virtual arc just after the node, the <em>exit_conduit</em> field should not be the arc_id of the virtual arc but should be the arc_id of the conduit that receives the flow since the merge operation of the virtual arcs with the conduit this is coupled with the arc_id of the conduit.</p>
+<p>If more than one regulator coexists between a given node and arc, at the time of export, the system draws as many arcs for SWMM as there are regulators.</p>
+<p>Important aspects to consider with the flw_length parameter:</p>
+<ul>
+<li>The parameter flw_length is the length of the flow regulator.</li>
+<li>If there is more than one flow regulator between the node and arc, the system will take the maximum value.</li>
+<li>The length of the flow regulator is important in case of orifices or weirs and refers to the distance downstream of it, in which normal flow conditions in the pipeline can not be assumed, i.e., this is an ineffective length of the downstream conduit.</li>
+</ul>
+<h2 id="92-export-methods">9.2 Export methods</h2>
+<p>Until version 3.5.025, for "ud" projects, when we wanted to export our network we had to go to "Go to EPA" and click on "Options" to configure a series of parameters (both in the "Inp" and in the "Rpt" tab) that were necessary for the simulation.</p>
+<p>Since version 3.5.026, in the "Inp" tab, in the "GENERAL" section, we find the "Network geometry generator" parameter, which will allow us to configure the export to perform the simulation with SWMM (option "1D SWMM") or with IBER (option "1D/2D SWMM-IBER").</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="figure 16" src="../images/figure16_export.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Network geometry generator parameter.</em></td>
+</tr>
+</tbody>
+</table>
+<p>This opens up a wide range of possibilities when studying our network, since it allows us to also simulate it with IBER and study its behaviour in the different scenarios that can occur in floods.</p>
+<p>NOTE: IBER is a two-dimensional hydraulic model software used for simulation of free overland flow. For more information, you can visit their website: <a href="https://www.iberaula.es/">https://www.iberaula.es/</a>.</p>
+<p>When we choose the option "1D SWMM" an inp file will be generated, as before, containing all the information that SWMM needs to ru the simulation. In the event that we choose the "1D/2D SWMM-IBER" option, two files will be generated that can be loaded into IBER:</p>
+<ul>
+<li>One with the .inp extension that will only use the hydraulic data (data referring to rainfall or hydrology will not be used since they must be created specifically in IBER).</li>
+<li>Ahother with a .dat extension that will contain the information on the drains that will be managed from IBER.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="figure 17" src="../images/figure17_iber.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Example of a .dat file created on export.</em></td>
+</tr>
+</tbody>
+</table>
+<p>As we can see in the previous image, in the new .dat file we have some fields from the sink layer that did not exist until now.</p>
+<p>Next, we will see what they are.</p>
+<h3 id="921-gullys-layer-management">9.2.1 Gullys layer management</h3>
+<p>As of version 3.5.026, if we display the "EPA" group in the ToC, within the "Hydraulics" subgroup we can see that we have three new layers:</p>
+<ul>
+<li>Inp Netgully: represents those gullys that function as a node.</li>
+<li>Inp Gully: are the gullys of the network.</li>
+<li>Gully2Node: line that joins the drain to the node.</li>
+</ul>
+<p>Since the layer we are interested in is the "Inp Gully", we are going to focus on it. If we open its attribute table and scroll to the end, we will see that there are some fields that we must fill in:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="figure 18" src="../images/figure18_gully.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Inp Gully layer attribute layer.</em></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>outlet type: outlet type. We may have two options:<ul>
+<li>To_network: towards the network.</li>
+<li>Sink: the flow will be lost as sink behaviour.</li>
+</ul>
+</li>
+<li>custom top elev: custom elevation. This value overrides the value of the top_elev field.</li>
+<li>custom width: custom width. This value overrides the width that the inlet is assigned in its corresponding catalog.</li>
+<li>custom length: custom length. This value overrides the length that the gully is assigned in its corresponding catalog.</li>
+<li>custom depth: custom depth. This value overrides the depth that is defined in the node or gully depth.</li>
+<li>method: calculation method used for gullys in IBER. There are two options:<ul>
+<li>W/O: this method uses the values of the "weir_cd" and "orifice_cd" fields.</li>
+<li>UPC: this method uses the values of the "a_param" and "b_param" fields. For more information about this method, you can visit <a href="https://upcommons.upc.edu/handle/2117/172466">https://upcommons.upc.edu/handle/2117/172466</a>.</li>
+</ul>
+</li>
+<li>weir_cd: discharge coefficient of the weir used in the W/O method.</li>
+<li>orifice_cd: discharge coefficient of the orifice used in the W/O method.</li>
+<li>custom_a_param: custom value for the A parameter when using the UPC method. This value overrides the parameter value in the corresponding catalog.</li>
+<li>custom_b_param: custom value for the B parameter when using the UPC method. This value overrides the parameter value in the corresponding catalog.</li>
+<li>efficiency: efficiency of the sump in controlling runoff.</li>
+</ul>
+<p>We can configure the values of the "outlet type", "method", "weir_cd", "orifice_cd" and "efficiency" fields by default by going to the "Basic" tab in the Giswater configuration.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="figure 19" src="../images/figure19_basic.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Default configuration of Epa variables.</em></td>
+</tr>
+</tbody>
+</table>
+<p>When we have filled in all the corresponding values, we can now export our network. As soon as we have exported it, we will have to be aware of possible critical errors that may occur. In the event that any appear, we must correct them.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="figure 20" src="../images/figure20_error.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Default configuration of Epa variables.</em></td>
+</tr>
+</tbody>
+</table>
+<p>Example of critical error to correct after export.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../Planification_sectors/" class="btn btn-neutral float-left" title="8. Planification Sectors"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../data_integration/Commercial_data/" class="btn btn-neutral float-right" title="10. Commercial Data">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../Planification_sectors/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../../data_integration/Commercial_data/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

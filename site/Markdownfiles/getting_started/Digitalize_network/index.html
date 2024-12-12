@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>6. How to Digitalize the Network - Giswater Documentation</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "6. How to Digitalize the Network";
+        var mkdocs_page_input_path = "Markdownfiles\\getting_started\\Digitalize_network.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../..">
+          <img src="../../../assets/giswater.png" class="logo" alt="Logo"/>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Introduction</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../introduction/Introduction/">1. Overview</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Installation and Setup</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../installation/Necessary_software/">2. Necessary Software</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../installation/Basic_work_rules/">3. Basic Work Rules</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Working with Giswater</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../Working_environment_QGIS/">4. QGIS Environment</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Giswater_plugin/">5. Giswater Plugin</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">6. How to Digitalize the Network</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#61-previous-step">6.1 Previous step</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#62-digitalization-of-the-network">6.2 Digitalization of the network</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#63-qgis-advanced-digitizing-panel">6.3. QGIS Advanced Digitizing Panel</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Tools and Advanced Features</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tools/Toolbox_adjustments/">7. Toolbox Adjustments</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Managing Projects</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../project_management/Planification_sectors/">8. Planification Sectors</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../project_management/Hydraulic_model/">9. Hydraulic Model (Export/Import)</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Data Integration</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../data_integration/Commercial_data/">10. Commercial Data</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Additional Information</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../additional/Other_considerations/">11. Other Considerations</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../additional/annex/">Annex</a>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../visualization_proposals/visualisations/">visualization proposals</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">Giswater Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Working with Giswater</li>
+      <li class="breadcrumb-item active">6. How to Digitalize the Network</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="6-how-to-digitalize-the-network">6. How to digitalize the network</h1>
+<p>Once all the tools of the Giswater <em>plugin</em> are known, it is time to use the full potential of the program and start working with the water network. It is considered appropriate and interesting to dedicate a section to know the necessary steps to digitize parts of the network, because it is one of the most common processes for those in charge of managing it.</p>
+<p>Here below you can find those steps, and some data and hierarchy relations when filling the layers with your project. Furthermore, <strong>additional technical information</strong> is compiled at the GitWiki:</p>
+<h2 id="61-previous-step">6.1 Previous step</h2>
+<p>If we are faced with an empty project, before inserting any element, we must consider some initial steps. Next, we will see in a practical way what it is necessary to do:</p>
+<p><strong>1 - Fill in the catalogs</strong></p>
+<p>It is necessary to fill in the catalogs of elements that will be introduced. Initially the data must be entered in the <em>cat_feature, cat_feature_node, cat_feature_arc, cat_feature_connec, cat_feature_gully(ud) tables</em>. We remind that the catalogs are explained in section <strong>4.2.1.1</strong> of this manual.</p>
+<p>The following scheme shows the hierarchy of existing catalogs within Giswater:</p>
+<p><img alt="figure 23" src="../images/figure23_hierarchy.avif" /></p>
+<p>Before the element catalogs, it will be necessary to have some record in the material catalog, both for arcs and for nodes.</p>
+<p><strong>2 - Map zones</strong></p>
+<p>As it was presented in the section <strong>3.4</strong> the map zones are are essential for the use of Giswater, so that, before introducing elements, a series of zones of the map must be defined.</p>
+<p>It can be done directly with the QGIS project, looking for the corresponding layer and adding a geometric element (polygonal). The relation of creation of zones of the map, in order, should be this:</p>
+<ol>
+<li>Macroexploitation (without geometry)</li>
+<li>Exploitation</li>
+<li>Dma</li>
+<li>Sector</li>
+<li>Municipality</li>
+</ol>
+<h2 id="62-digitalization-of-the-network">6.2 Digitalization of the network</h2>
+<p>Part of the plugin tools are used to digitize, especially those associated with role_edit, but other parameters must be considered so that the insertion of new elements is correct and precise. Next, it will be explained in detail which are the steps to follow, in chronological order, to digitize new elements, both linear and specific:</p>
+<ul>
+<li><strong>Example of digitalization of a new section of the network</strong></li>
+</ul>
+<p>Through a practical example, carried out in one of the sample projects of Giswater, it will be explained how a new section of the network can be generated, which will consist of the insertion of 5 new nodes and 4 arcs. All these new elements must be placed in a specific position, as represented in the image below, simulating a real work.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="figure 24" src="../images/figure24_visualisation.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>The elements to be incorporated in this example must be located on the points marked in the image. The exact distances between elements are specified.</em></td>
+</tr>
+</tbody>
+</table>
+<p>The elements represented in the image refer to the nodes, which will consist of 3 junctions (Junction), located at the intersections of the arcs, a valve, and a hydrant. The arcs will be all pipes (Pipe), which will be drawn in a straight line connecting the nodes.</p>
+<p><strong>Process</strong>*</p>
+<p>1 - Before creating any element, it is especially important to know which are the <strong>mandatory</strong> fields for each type of element are, so that, if they are not filled in during the insertion, it will not be completed. The following table specifies these fields and how they can be filled in, since Giswater offers different methods to facilitate the insertion of data. In the form itself the mandatory fields are marked with a *</p>
+<table>
+<thead>
+<tr>
+<th><strong>Field</strong></th>
+<th><strong>In case leaving it <em>NULL</em>, how is it filled in?</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Node/Arc catalog</strong></td>
+<td>Default value (one for each element)</td>
+</tr>
+<tr>
+<td><strong>Municipality</strong></td>
+<td>Default value, if not the value is captured from geometry</td>
+</tr>
+<tr>
+<td><strong>Exploitation</strong></td>
+<td>Default value, if not the value is captured from geometry</td>
+</tr>
+<tr>
+<td><strong>Dma</strong></td>
+<td>Value is captured from geometry, if not it uses default value</td>
+</tr>
+<tr>
+<td><strong>Sector</strong></td>
+<td>Value is captured from geometry, if not it uses default value</td>
+</tr>
+<tr>
+<td><strong>State</strong></td>
+<td>Default value, if not the first value from <code>value_state</code> table</td>
+</tr>
+</tbody>
+</table>
+<p>2 - As we see, it is important to configure default values, since many times the insertions of new elements will be made in the same municipality, exploitation, dma and sector. The default values will allow to work faster. For this example, using the configuration tool, we set the default values for <em>Hydrant catalog, Junction catalog, Valve catalog, Verified</em> (field not mandatory but recommended), <em>Exploitation, Municipality, Sector</em> and <em>Dma</em>. The state will be entered manually each time.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="figure 25" src="../images/figure25_functions.avif" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>In the form of Configuration, we mark the default values we want to use for this specific example. These can be modified as many times as the user wants.</em></td>
+</tr>
+</tbody>
+</table>
+<p>3 - If we want to digitize with an extremely high degree of precision in the placement of elements, as is the case in this example, before entering any element we must draw support points to then place the nodes in the specific place. To draw these support points there are different options: the CAD tools of the Giswater plugin or other tools incorporated into QGIS, such as the ‘advanced digitization tools’.</p>
+<p>4 - To draw the first support point, which must be 2 meters from the intersection between the street 9110C and arc PVC110-PN16, we will use the 'Create Circle' plugin tool. With the snapping activated, place the cursor over the intersection and click. The radius of the circle must be 2 meters.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="figure 26" src="../images/figure26_circle.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>The circle of 2 meters radius will be used to place the node in the exact point.</em></td>
+</tr>
+</tbody>
+</table>
+<p>5 - At the intersection of the circle line with the Pipe layer is where we must place the first Junction element. Using the keyboard shortcut (J) we place the new element just above the intersection. To know that we have done it well, the program must show a window that indicates that we are going to break an arc. As we have many values established by default, in the element form we only must indicate the status, in this case, ON SERVICE. We will also mark the type of status as ON SERVICE.</p>
+<p>6 - With the first element already introduced, now we need to place the second support point, which will serve to mark the location of where we want to insert the valve. This should be 12 meters from the beginning of the street 9110C and 2 meters to the left.</p>
+<p>7 - With the tool 'Add relative point', we mark the first point at the beginning of 9110C street of the Streetaxis layer and another at a certain distance on the same line. This way we can draw a point 12 meters from the beginning (x) and 2 meters towards the outside (y).</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="figure 28" src="../images/figure28_tool.avif" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>The second node will be located over the red point, generated using the ‘Add relative point’ tool.</em></td>
+</tr>
+</tbody>
+</table>
+<p>8 - Just above this support point is where we place the new valve. As before, the only values we fill in manually are the state and the state type. The rest are configured by default.</p>
+<p>9 - To draw the next support point (in this case it will be a line), we will use the QGIS tools. With the <strong>advanced digitizing panel</strong>, it is possible to draw a line perpendicular to node 1072 and which, at the same time, is 2 meters from the street 9110C.</p>
+<p>10 - The first step is to generate a new temporary draft layer (Image below). It must be a linear layer, with the same EPSG as our project has. Once created, we put the layer in edition and click on 'Add spatial object'.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="figure 29" src="../images/figure29_capa.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>From Layer we can add a new temporary layer</em></td>
+</tr>
+</tbody>
+</table>
+<p>11 - With the advanced digitizing panel active, we first select the node from which we want the new line to start. Then we click on the 'Perpendicular' button and select the arc that will serve as a reference to draw the perpendicular line, in this case the Pipe showed in the next image. We should note that a fine auxiliary line is drawn perpendicular to the desired node. Now, we can click on the street axis, thus establishing the first part of the line. Without stopping the edition, we establish a radius of 2 meters in the field where it says 'd', considering that we must be located above the axis of the street. We click again on the auxiliary line, now just above the intersection with the generated 2-meter circle. Once we see that the red line reaches where we want, we click the button to the right of the mouse to end the support line.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="figure 30" src="../images/figure30_circle2.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>With the panel of advanced digitizing, it is possible to draw a perpendicular line to another element at the desired distance. The red line represents a section that will be saved in the temporal table. The left side of the circle also has the line slightly painted red.</em></td>
+</tr>
+</tbody>
+</table>
+<p>12 - Using this line, we can place the third node of the example, in this case a union of type 'T'. In the same way as in previous cases, we insert the new element right at the limit of the support line, knowing that it is exactly where it should be: two meters from the street axis, perpendicular to the other pipeline and at the same height as the union that ends this pipe.</p>
+<p>13 - At this moment we want to place the hydrant, which must be 4 meters from the junction that we have just generated and at the same height. As we have the support line still visible on the map, we will use it again to locate the new support point. Knowing that it must be at the same height as the line, with the 'Add relative point' tool, we will introduce a support point.</p>
+<p>14 - With this tool we mark a point on the node 114470 and another one on the support line of the temporal layer. The 'x' must be -4 and 'y' must be 0. As we have clicked on the node first, we select the <em>Init point</em> as the exit point of the relative element.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="figure 31" src="../images/figure31_cad.avif" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>The Add Relative Point tool will be used to place a point at a certain distance from another element. The timeline is selected with a box for better viewing.</em></td>
+</tr>
+</tbody>
+</table>
+<p>15 - Next, we place the hydrant element just above the support point that we just added. As always, with the default values configured, we just manually add the node state.</p>
+<p>16 - Now we have added four out of five nodes that were planned at the beginning of the example. To insert the last union, which will break the arc FC110-PN10, we will use the same method as in the first union of the example: draw a circle with a radius of 2 meters at the intersection of the arc and the street axis.</p>
+<p>17 - We insert a union element, checking that the arc was divided into two.</p>
+<p>18 - We have finished inserting nodes. Currently, we only have to connect the different nodes with arcs. The insertion process is quite simple.</p>
+<p>19 - At the beginning of the example, we only established the default values for node-type elements. Now we must add the default value for the arc catalog, in this case FC110-PN10, so the insertion will be faster.</p>
+<p>20 - To add the first pipe, using the keyboard shortcut 'P', we choose the start node and the final node, and clicking with the left mouse button to set it and with the right button to finish the line.</p>
+<p>21 - We repeat the process of inserting pipeline elements to join all the nodes created during this example, so that the network connects from one side to the other. The final result can be seen in image below.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="figure 32" src="../images/figure32_image.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>The new network section, planned in the first image of this section (6.2), can be seen in this image, so that the nodes and the inserted arcs connect the existing network sections. The new elements are placed exactly where planned, so that the representation of the real network is as accurate as possible.</em></td>
+</tr>
+</tbody>
+</table>
+<h2 id="63-qgis-advanced-digitizing-panel">6.3. QGIS Advanced Digitizing Panel</h2>
+<p>Apart from Giswater plugin's functions, another great tool to accurately digitize the network is the Advanced Digitizing Panel, a group of tools ready to use by default in QGIS.</p>
+<p>This panel allow users to draw support points or lines to later insert the network using these supports. It's especially useful when some parallel or perpendicular lines are needed.</p>
+<p>In the next image there's a complete schema of the functionality of the panel, since it's not easy to use at the beginning.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><img alt="figure 33" src="../images/figure33_advanced.avif" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><em>Complete schema of the QGIS Advanced Digitizing Panel. Source: https://pigrecoinfinito.com</em></td>
+</tr>
+</tbody>
+</table>
+<p>Complete schema of the QGIS Advanced Digitizing Panel. Source: https://pigrecoinfinito.com
+Previous</p>
+<p><img alt="figure 33" src="../images/figure33_advanced.avif" /><em>Figure 1: test.</em></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../Giswater_plugin/" class="btn btn-neutral float-left" title="5. Giswater Plugin"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../tools/Toolbox_adjustments/" class="btn btn-neutral float-right" title="7. Toolbox Adjustments">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../Giswater_plugin/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../../tools/Toolbox_adjustments/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

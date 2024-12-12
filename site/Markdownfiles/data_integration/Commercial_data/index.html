@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>10. Commercial Data - Giswater Documentation</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "10. Commercial Data";
+        var mkdocs_page_input_path = "Markdownfiles\\data_integration\\Commercial_data.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../..">
+          <img src="../../../assets/giswater.png" class="logo" alt="Logo"/>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Introduction</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../introduction/Introduction/">1. Overview</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Installation and Setup</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../installation/Necessary_software/">2. Necessary Software</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../installation/Basic_work_rules/">3. Basic Work Rules</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Working with Giswater</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../getting_started/Working_environment_QGIS/">4. QGIS Environment</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../getting_started/Giswater_plugin/">5. Giswater Plugin</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../getting_started/Digitalize_network/">6. How to Digitalize the Network</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Tools and Advanced Features</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tools/Toolbox_adjustments/">7. Toolbox Adjustments</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Managing Projects</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../project_management/Planification_sectors/">8. Planification Sectors</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../project_management/Hydraulic_model/">9. Hydraulic Model (Export/Import)</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Data Integration</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">10. Commercial Data</a>
+    <ul class="current">
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Additional Information</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../additional/Other_considerations/">11. Other Considerations</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../additional/annex/">Annex</a>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../visualization_proposals/visualisations/">visualization proposals</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">Giswater Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Data Integration</li>
+      <li class="breadcrumb-item active">10. Commercial Data</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="10-connection-with-data-from-the-commercial-management-system">10. Connection with data from the commercial management system</h1>
+<p>Giswater is prepared to simulate flow data in water projects (WS) taking data from the commercial management system. It is not an easy task. You will need specific tables similars to the ones on the following list (mandatory on bold):</p>
+<p><strong><em>hydrometer</em></strong>
+<strong><em>hydrometer_x_data</em></strong>
+<em>hydro_cat_catalog</em>
+<em>hydro_cat_category</em>
+<strong><em>hydro_val_state</em></strong>
+<strong><em>hydro_cat_period</em></strong>
+<em>hydro_cat_priority</em></p>
+<p>By using a script to connect to the CRM, these tables can be filled, either with real-time data, or with data obtained through a nightly data loading and updating process. </p>
+<p>Usually these tables are stored in an specific schema named <em>crm</em>.</p>
+<p>Once the tables are filled in, its information <strong>must be connected to Giswater data model</strong> with their corresponding correlation tables:</p>
+<p><strong><em>ext_rtc_hydrometer</em></strong>
+<strong><em>ext_rtc_hydrometer_x_data</em></strong>
+<strong><em>ext_cat_period</em></strong><strong>
+</strong><em>rtc_hydrometer</em><strong>
+</strong><em>rtc_hydrometer_x_connec</em>**</p>
+<p><strong>WORKFLOW OF TABLES AND DATA</strong></p>
+<ul>
+<li>For each hydrometer, table <strong>ext_rtc_hydrometer</strong> need to be filled using some nightly process. After first load it only updates changes.</li>
+<li>For hydrometer consumptions, the table <strong>ext_rtc_hydrometer_x_data</strong> need to be filled using some nightly process each time you have new data from billing period (in combination with <strong>ext_cat_period</strong>).</li>
+<li>For each hydrometer, the relation with the Giswater hydrometer is: <strong>rtc_hydrometer</strong>.<span style="color: blue;"><strong>hydrometer_id</strong></span>.::text = <strong>ext_rtc_hydrometer</strong>.<span style="color: blue;"><strong>id</strong></span>::text</li>
+<li>For each hydrometer, the relation with the Giswater connec is: <strong>ext_rtc_hydromete</strong>r.<span style="color: blue;"><strong>connec_id</strong></span>::text = <strong>connec.</strong><span style="color: blue;"><strong>customer_code</strong></span>::text</li>
+<li>Finally it is mandatory to keep the table <strong>ext_cat_period</strong> updated and be sure that you fill two tables more with giswater ids (hydrometer_id &amp; connec_id)<ul>
+<li><strong>rtc_hydrometer</strong> with <span style="color: blue;"><strong>hydrometer_id</strong></span></li>
+<li><strong>rtc_hydrometer_x_connec</strong> with <span style="color: blue;"><strong>hydrometer_id</strong></span> and <span style="color: blue;"><strong>connec_id</strong></span></li>
+</ul>
+</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../../project_management/Hydraulic_model/" class="btn btn-neutral float-left" title="9. Hydraulic Model (Export/Import)"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../additional/Other_considerations/" class="btn btn-neutral float-right" title="11. Other Considerations">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../../project_management/Hydraulic_model/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../../additional/Other_considerations/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
