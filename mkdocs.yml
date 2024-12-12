@@ -62,7 +62,7 @@ nav:
             - Lost Control: giswater/FOR_ADMIN/Interoperability/lost_control/lost_control.md
             - SCADA: giswater/FOR_ADMIN/Interoperability/scada/scada.md
       - FOR DEV:
-        - Overview: Giswater/FOR_DEV/index.md
+        - Overview: giswater/FOR_DEV/index.md
         - PyGiswater:
             - Functions and Methods: giswater/FOR_DEV/pygiswater/functions_methods.md
         - PlGiswater:
