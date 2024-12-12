@@ -1,36 +1,108 @@
-site_name: Giswater Documentation
+site_name: "Giswater Documentation"
 theme:
-  name: material
-  logo: assets/giswater.png
-font:
-  text: Roboto
-  code: Roboto Mono
-markdown_extensions:
-  - attr_list
-  - admonition
+  name: readthedocs
+  logo: assets/giswater2.png
+
+  markdown_extensions:
+    - attr_list
+    - admonition
+
 nav:
   - Home: index.md
-  - Introduction:
-      - 1. Overview: Markdownfiles/introduction/Introduction.md
-  - Installation and Setup:
-      - 2. Necessary Software: Markdownfiles/installation/Necessary_software.md
-      - 3. Basic Work Rules: Markdownfiles/installation/Basic_work_rules.md
-  - Working with Giswater:
-      - 4. QGIS Environment: Markdownfiles/getting_started/Working_environment_QGIS.md
-      - 5. Giswater Plugin: Markdownfiles/getting_started/Giswater_plugin.md
-      - 6. How to Digitalize the Network: Markdownfiles/getting_started/Digitalize_network.md
-  - Tools and Advanced Features:
-      - 7. Toolbox Adjustments: Markdownfiles/tools/Toolbox_adjustments.md
-  - Managing Projects:
-      - 8. Planification Sectors: Markdownfiles/project_management/Planification_sectors.md
-      - 9. Hydraulic Model (Export/Import): Markdownfiles/project_management/Hydraulic_model.md
-  - Data Integration:
-      - 10. Commercial Data: Markdownfiles/data_integration/Commercial_data.md
-  - Additional Information:
-      - 11. Other Considerations: Markdownfiles/additional/Other_considerations.md
-      - Annex: Markdownfiles/additional/annex.md
-  - visualization proposals: Markdownfiles/visualization_proposals/visualisations.md
-
-
+  - GisWater:
+      - FOR USERS: 
+        - Overview: giswater/FOR_USERS/index.md
+        - Quick Start Guide:
+            - Start Guide: giswater/FOR_USERS/Quick_startguide/quick_startguide/Startguide.md
+        - Users Manual:
+            - 1- Introduction: giswater/FOR_USERS/Users_manual/1-introduction/1.Introduction.md
+            - 2- Necessary Software: giswater/FOR_USERS/Users_manual/2-Necessary_software/2.Necessary_software.md
+            - 3- Basic Work Rules: giswater/FOR_USERS/Users_manual/3-Basic_work_rules/3.Basic_work_rules.md
+            - 4- Working Environment QGIS: giswater/FOR_USERS/Users_manual/4-Working_environment_QGIS/4.Working_environment_QGIS.md
+            - 5- Giswater Plugin: giswater/FOR_USERS/Users_manual/5-giswater_plugin/Giswater_plugin.md
+            - 6- Digitalization: giswater/FOR_USERS/Users_manual/6-Digitalization/Digitalize_network.md
+            - 7- Topological and Geometrical Adjustments: giswater/FOR_USERS/Users_manual/7-topological_and_geometrical_adjustments/Toolbox_adjustments.md
+            - 8- Hydraulic Model: giswater/FOR_USERS/Users_manual/8-hydraulic_model/Hydraulic_model.md
+            - 9- Planification Sectors: giswater/FOR_USERS/Users_manual/9-psectors/Planification_sectors.md
+            - 10- Netscenarios: giswater/FOR_USERS/Users_manual/10-netscenarios/Commercial_data.md
+        - Feature Data Model:
+            - Data Model: giswater/FOR_USERS/FeatureData_model/Datamodel.md
+        - Users Tricks:
+            - DBModel Variables: giswater/FOR_USERS/Users_tricks/dbmodel_variables/dbmodel_variables.md
+            - Profile Edition: giswater/FOR_USERS/Users_tricks/profile_edition/profile_edition.md
+            - Profile Settings: giswater/FOR_USERS/Users_tricks/profile_settings/profile_settings.md
+            - Python Variables: giswater/FOR_USERS/Users_tricks/python_variables/python_variables.md
+      - FOR ADMIN:
+        - Overview: giswater/FOR_ADMIN/index.md
+        - Logic DBModel:
+            - UD: giswater/FOR_ADMIN/logic_dbmodel/ud/ud.md
+            - WS: giswater/FOR_ADMIN/logic_dbmodel/ws/ws.md
+        - Fisic DBModel:
+            - Role Admin: giswater/FOR_ADMIN/fisic_dbmodel/role_admin/role_admin.md
+            - Role Basic: giswater/FOR_ADMIN/fisic_dbmodel/role_basic/role_basic.md
+            - Role Edit: giswater/FOR_ADMIN/fisic_dbmodel/role_edit/role_edit.md
+            - Role EPA: giswater/FOR_ADMIN/fisic_dbmodel/role_epa/role_epa.md
+            - Role OM: giswater/FOR_ADMIN/fisic_dbmodel/role_om/role_om.md
+            - Role Plan: giswater/FOR_ADMIN/fisic_dbmodel/role_plan/role_plan.md
+            - Role System: giswater/FOR_ADMIN/fisic_dbmodel/role_system/role_system.md
+        - System Variables:
+            - DBModel: giswater/FOR_ADMIN/system_variables/dbmodel/dbmodel.md
+            - QGIS Project: giswater/FOR_ADMIN/system_variables/qgis_project/qgis_project.md
+        - Admin Protocols:
+            - Create Fields: giswater/FOR_ADMIN/admin_protocols/create_fields/create_fields.md
+            - Forms Configurations: giswater/FOR_ADMIN/admin_protocols/forms_configurations/forms_configurations.md
+            - Management: giswater/FOR_ADMIN/admin_protocols/management/management.md
+            - Mapzones Configurations: giswater/FOR_ADMIN/admin_protocols/mapzones_configurations/mapzones_configurations.md
+            - Mincut Configurations: giswater/FOR_ADMIN/admin_protocols/mincut_configurations/mincut_configurations.md
+            - Raster Loading: giswater/FOR_ADMIN/admin_protocols/raster_loading/raster_loading.md
+            - Schema Architecture: giswater/FOR_ADMIN/admin_protocols/schema_architecture/schema_architecture.md
+        - Interoperability:
+            - CRM: giswater/FOR_ADMIN/Interoperability/crm/crm.md
+            - GMAO: giswater/FOR_ADMIN/Interoperability/gmao/gmao.md
+            - Lost Control: giswater/FOR_ADMIN/Interoperability/lost_control/lost_control.md
+            - SCADA: giswater/FOR_ADMIN/Interoperability/scada/scada.md
+      - FOR DEV:
+        - Overview: Giswater/FOR_DEV/index.md
+        - PyGiswater:
+            - Functions and Methods: giswater/FOR_DEV/pygiswater/functions_methods.md
+        - PlGiswater:
+            - Functions and Methods: giswater/FOR_DEV/pigiswater/functions_methods.md
+  - QWC2 for Giswater:
+      - FOR USERS:
+        - Overview: giswater_qwc2/FOR_USERS/index.md
+        - Quick Start Guide:
+            - Start Guide: giswater_qwc2/FOR_USERS/Quick_startguide/quick_startguide/Startguide.md
+        - Users Manual:
+            - 1- Introduction: giswater_qwc2/FOR_USERS/Users_manual/1-introduction/1.Introduction.md
+            - 2- Necessary Software: giswater_qwc2/FOR_USERS/Users_manual/2-Necessary_software/2.Necessary_software.md
+            - 3- Basic Work Rules: giswater_qwc2/FOR_USERS/Users_manual/3-Basic_work_rules/3.Basic_work_rules.md
+            - 4- Working Environment QGIS: giswater_qwc2/FOR_USERS/Users_manual/4-Working_environment_QGIS/4.Working_environment_QGIS.md
+            - 5- Giswater Plugin: giswater_qwc2/FOR_USERS/Users_manual/5-giswater_plugin/Giswater_plugin.md
+            - 6- Digitalization: giswater_qwc2/FOR_USERS/Users_manual/6-Digitalization/Digitalize_network.md
+            - 7- Topological and Geometrical Adjustments: giswater_qwc2/FOR_USERS/Users_manual/7-topological_and_geometrical_adjustments/Toolbox_adjustments.md
+            - 8- Hydraulic Model: giswater_qwc2/FOR_USERS/Users_manual/8-hydraulic_model/Hydraulic_model.md
+            - 9- Planification Sectors: giswater_qwc2/FOR_USERS/Users_manual/9-psectors/Planification_sectors.md
+            - 10- Netscenarios: giswater_qwc2/FOR_USERS/Users_manual/10-netscenarios/Commercial_data.md
+      - FOR ADMIN:
+        - Overview: giswater_qwc2/FOR_ADMIN/index.md
+        - Logic DBModel:
+            - UD: giswater_qwc2/FOR_ADMIN/logic_dbmodel/ud/ud.md
+            - WS: giswater_qwc2/FOR_ADMIN/logic_dbmodel/ws/ws.md
+        - Fisic DBModel:
+            - Role Admin: giswater_qwc2/FOR_ADMIN/fisic_dbmodel/role_admin/role_admin.md
+            - Role Basic: giswater_qwc2/FOR_ADMIN/fisic_dbmodel/role_basic/role_basic.md
+            - Role Edit: giswater_qwc2/FOR_ADMIN/fisic_dbmodel/role_edit/role_edit.md
+            - Role EPA: giswater_qwc2/FOR_ADMIN/fisic_dbmodel/role_epa/role_epa.md
+            - Role OM: giswater_qwc2/FOR_ADMIN/fisic_dbmodel/role_om/role_om.md
+            - Role Plan: giswater_qwc2/FOR_ADMIN/fisic_dbmodel/role_plan/role_plan.md
+            - Role System: giswater_qwc2/FOR_ADMIN/fisic_dbmodel/role_system/role_system.md
+        - Admin Protocols:
+            - Create Fields: giswater_qwc2/FOR_ADMIN/admin_protocols/create_fields/create_fields.md
+            - Forms Configurations: giswater_qwc2/FOR_ADMIN/admin_protocols/forms_configurations/forms_configurations.md
+            - Management: giswater_qwc2/FOR_ADMIN/admin_protocols/management/management.md
+            - Mapzones Configurations: giswater_qwc2/FOR_ADMIN/admin_protocols/mapzones_configurations/mapzones_configurations.md
+            - Mincut Configurations: giswater_qwc2/FOR_ADMIN/admin_protocols/mincut_configurations/mincut_configurations.md
+            - Raster Loading: giswater_qwc2/FOR_ADMIN/admin_protocols/raster_loading/raster_loading.md
+            - Schema Architecture: giswater_qwc2/FOR_ADMIN/admin_protocols/schema_architecture/schema_architecture.md
 plugins:
   - search
